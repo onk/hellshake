@@ -1,1 +1,11 @@
 inherit_from: .rubocop_standard.yml
+
+# Style/TrailingComma との相性が悪いので
+# できれば false にしたいんだけど有効化
+Style/BracesAroundHashParameters:
+  Enabled: true
+
+# Style/BracesAroundHashParameters で末尾 Hash を綺麗にすると
+# consistent_comma でも問題なくなった
+Style/TrailingComma:
+  EnforcedStyleForMultiline: consistent_comma
