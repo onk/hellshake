@@ -156,15 +156,15 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  coffee-rails (~> 4.1.0)
-  jbuilder (~> 2.0)
+  coffee-rails
+  jbuilder
   jquery-rails
   mysql2
   rails (= 4.2.1)
   rubocop
-  sass-rails (~> 5.0)
-  sdoc (~> 0.4.0)
+  sass-rails
+  sdoc
   spring
   turbolinks
-  uglifier (>= 1.3.0)
-  web-console (~> 2.0)
+  uglifier
+  web-console
