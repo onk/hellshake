@@ -2,11 +2,11 @@ source "https://rubygems.org"
 
 gem "rails", "4.2.1"
 
+gem "bower-rails"
 gem "coffee-rails"
 gem "global"
 gem "gravtastic"
 gem "jbuilder"
-gem "jquery-rails"
 gem "kaminari"
 gem "mysql2"
 gem "sass-rails"

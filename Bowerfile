@@ -1,0 +1,4 @@
+# Check out https://github.com/42dev/bower-rails#ruby-dsl-configuration for more options
+
+asset "jquery", "2.1.4"
+asset "jquery-ujs", "1.0.3"
