@@ -12,5 +12,8 @@
 !/log/.keep
 /tmp
 
+# Ignore database password
+/config/database.yml
+
 # bower generated files
 /vendor/assets/bower_components/
