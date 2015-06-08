@@ -4,6 +4,11 @@ TODO
 -   [ ] 何もかも諦めて最初から Rails 使うぞ！
 -   [ ] pdf のスライドを web 上で見られる
     -   pdf.js を用いればできそう
+        -   サンプル
+            * https://github.com/mrraj/pdfjs
+            * https://github.com/concordia-publishing-house/pdfjs-rails
+            * https://github.com/shyammohankanojia/pdfjs_rails
+            * https://github.com/senny/pdfjs_viewer-rails
 -   [ ] ppt/pptx のスライドを web 上で見られる
     -   libreoffice --headless を用いて ppt/pptx を pdf に変換すればできそう
         -   コマンドメモ
