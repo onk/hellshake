@@ -12,8 +12,8 @@ TODO
 -   [ ] サムネイル表示
     -   ImageMagick で pdf から png にできるので瞬殺っぽい
 -   [ ] ppt/pptx/pdf の中のテキストで検索
-    -   ppt/pptx は libreoffice を用いたらテキストに変換できる？
-    -   pdf をテキストに変換するのどうしようか
+    -   コマンドメモ
+        `pdftotext -nopgbrk 20141101_すこやかRails.pdf -`
     -   変換したら ElasticSearch に流し込もう
         -   author で絞って検索
         -   title で絞って検索
