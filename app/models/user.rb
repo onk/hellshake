@@ -25,5 +25,6 @@ class User < ActiveRecord::Base
             format: { with: VALID_USERNAME_REGEX, message: :username_regex },
             exclusion: { in: ReservedWord.list }
 
+  has_many :presentations
   has_many :user_accounts, dependent: :destroy, autosave: true
 end
