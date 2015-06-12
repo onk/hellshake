@@ -7,4 +7,8 @@ Rails.application.routes.draw do
     get "sign_out", to: "devise/sessions#destroy", as: :destroy_user_session
   end
   root "welcome#index"
+
+  scope "/:username" do
+    resources :presentations, only: [:index, :show, :create]
+  end
 end
