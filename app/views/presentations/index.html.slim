@@ -1,2 +1,8 @@
 h1 Presentations#index
 p Find me in app/views/presentations/index.html.slim
+
+- if current_user
+  = form_for(@presentation) do |f|
+    = f.file_field(:original_file)
+    br
+    = f.submit "upload"

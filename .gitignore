@@ -17,3 +17,6 @@
 
 # bower generated files
 /vendor/assets/bower_components/
+
+# Ignore uploaded files
+/public/uploads
