@@ -12,4 +12,6 @@
 //
 //= require jquery
 //= require jquery-ujs
+//= require pdfjs-dist
+//= require pdfjs-dist/build/pdf.worker
 //= require_tree .
