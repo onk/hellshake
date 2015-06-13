@@ -3,6 +3,7 @@ source "https://rubygems.org"
 gem "rails", "4.2.1"
 
 gem "bower-rails"
+gem "carrierwave"
 gem "coffee-rails"
 gem "dalli"
 gem "devise"
