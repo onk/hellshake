@@ -17,6 +17,7 @@ gem "omniauth-facebook"
 gem "omniauth-twitter"
 gem "reserved_word"
 gem "sass-rails"
+gem "sidekiq"
 gem "slim-rails"
 gem "uglifier"
 
