@@ -11,7 +11,7 @@ canvas#the-canvas[style="border:1px solid black;"]
 
 javascript:
   PDFJS.workerSrc = "/assets/pdfjs-dist/build/pdf.worker.js"
-  var url = "#{@presentation.original_file.url}";
+  var url = "#{@presentation.pdf_file.url}";
 
   var pdfDoc = null,
       pageNum = 1,
