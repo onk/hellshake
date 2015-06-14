@@ -9,7 +9,7 @@ TODO
             * https://github.com/concordia-publishing-house/pdfjs-rails
             * https://github.com/shyammohankanojia/pdfjs_rails
             * https://github.com/senny/pdfjs_viewer-rails
--   [ ] ppt/pptx のスライドを web 上で見られる
+-   [x] ppt/pptx のスライドを web 上で見られる
     -   libreoffice --headless を用いて ppt/pptx を pdf に変換すればできそう
         -   コマンドメモ
             `soffice --headless --convert-to pdf [--outdir ./out] 20141101_すこやかRails.pptx`
