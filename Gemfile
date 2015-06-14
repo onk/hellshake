@@ -30,6 +30,7 @@ group :development do
   gem "pry-doc"
   gem "pry-rails"
   gem "pry-stack_explorer"
+  gem "quiet_assets"
   gem "rubocop"
   gem "web-console", group: :test
 end
