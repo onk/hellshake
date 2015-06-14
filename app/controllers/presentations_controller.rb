@@ -16,6 +16,7 @@ class PresentationsController < ApplicationController
 
   def create
     presentation = current_user.presentations.create(presentation_params)
+    Ppt2pdfJob.perform_later(presentation)
     redirect_to presentation_path(current_user.username, presentation)
   end
 
