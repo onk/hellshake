@@ -1,0 +1,12 @@
+default:
+  queue:
+    namespace: "sidekiq"
+    host: localhost
+    port: 6379
+    db: 0
+
+development:
+
+test:
+
+production:

@@ -36,5 +36,8 @@ module Sharedoc
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # The Active Job adapter must be set to :sidekiq or it will simply use the default :inline.
+    config.active_job.queue_adapter = :sidekiq
   end
 end

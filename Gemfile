@@ -18,6 +18,7 @@ gem "omniauth-twitter"
 gem "reserved_word"
 gem "sass-rails"
 gem "sidekiq"
+gem "sinatra", require: false
 gem "slim-rails"
 gem "uglifier"
 

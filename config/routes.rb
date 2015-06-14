@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   scope "/:username" do
     resources :presentations, only: [:index, :show, :create]
   end
+
+  require "sidekiq/web"
+  mount Sidekiq::Web => "/sidekiq"
 end
