@@ -25,6 +25,8 @@ class Ppt2pdfJob < ActiveJob::Base
       end
       presentation[:pdf_file] = pdf_file_name
       presentation.save
+
+      Pdf2outlineJob.perform_later(presentation)
     }
   end
 end
