@@ -16,7 +16,7 @@ TODO
     -   変換時に job queue が必要そうなので sidekiq かなぁ
 -   [ ] サムネイル表示
     -   ImageMagick で pdf から png にできるので瞬殺っぽい
--   [ ] ppt/pptx/pdf の中のテキストで検索
+-   [x] ppt/pptx/pdf の中のテキストで検索
     -   コマンドメモ
         `pdftotext -nopgbrk 20141101_すこやかRails.pdf -`
     -   変換したら ElasticSearch に流し込もう
