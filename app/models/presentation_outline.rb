@@ -23,21 +23,21 @@ class PresentationOutline < ActiveRecord::Base
       filter: {
         pos_filter: {
           type: "kuromoji_part_of_speech",
-          stopgaps: ["助詞-格助詞-一般", "助詞-終助詞"]
+          stopgaps: ["助詞-格助詞-一般", "助詞-終助詞"],
         },
         greek_lowercase_filter: {
           type: "lowercase",
-          language: "greek"
-        }
+          language: "greek",
+        },
       },
       analyzer: {
         kuromoji_analyzer: {
           type: "custom",
           tokenizer: "kuromoji_tokenizer",
           mode: "extended",
-          filter: %w(kuromoji_baseform pos_filter greek_lowercase_filter cjk_width)
+          filter: %w(kuromoji_baseform pos_filter greek_lowercase_filter cjk_width),
         }
-      }
+      },
     }
   }
   mapping do
