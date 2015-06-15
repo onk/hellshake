@@ -14,7 +14,7 @@ TODO
         -   コマンドメモ
             `soffice --headless --convert-to pdf [--outdir ./out] 20141101_すこやかRails.pptx`
     -   変換時に job queue が必要そうなので sidekiq かなぁ
--   [ ] サムネイル表示
+-   [x] サムネイル表示
     -   ImageMagick で pdf から png にできるので瞬殺っぽい
 -   [x] ppt/pptx/pdf の中のテキストで検索
     -   コマンドメモ
