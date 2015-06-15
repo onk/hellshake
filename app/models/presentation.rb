@@ -21,4 +21,8 @@ class Presentation < ActiveRecord::Base
 
   belongs_to :user
   has_one :presentation_outline
+
+  def png_url
+    pdf_file.url.sub(/pdf$/, "png")
+  end
 end
