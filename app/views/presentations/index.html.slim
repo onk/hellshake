@@ -11,3 +11,17 @@ p Find me in app/views/presentations/index.html.slim
     = f.file_field(:original_file)
     br
     = f.submit "upload"
+
+ul
+- @presentations.each do |presentation|
+  li
+    dl
+      dt
+        = link_to(presentation_path(presentation.user.username, presentation.id)) do
+          = presentation[:original_file]
+      dd
+        - if presentation.presentation_outline
+          = image_tag(presentation.png_url, width: 100, aligh: "left")
+          = truncate(presentation.presentation_outline.body, length: 100)
+        - else
+          | 変換中
