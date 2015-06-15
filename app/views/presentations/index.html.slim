@@ -1,6 +1,11 @@
 h1 Presentations#index
 p Find me in app/views/presentations/index.html.slim
 
+= form_tag(presentations_search_path, method: "GET") do
+  = text_field_tag(:q)
+  br
+  = submit_tag "search"
+
 - if current_user
   = form_for(@presentation) do |f|
     = f.file_field(:original_file)

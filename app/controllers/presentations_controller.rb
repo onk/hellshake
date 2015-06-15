@@ -20,6 +20,11 @@ class PresentationsController < ApplicationController
     redirect_to presentation_path(current_user.username, presentation)
   end
 
+  def search
+    search_param = { "query": { "match_phrase": { "body": params[:q] } } }
+    @presentation_outlines = PresentationOutline.search(search_param).records.preload(presentation: :user)
+  end
+
   private
 
     def set_user
