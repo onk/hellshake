@@ -20,4 +20,5 @@ class Presentation < ActiveRecord::Base
   mount_uploader :pdf_file, PdfUploader
 
   belongs_to :user
+  has_one :presentation_outline
 end
