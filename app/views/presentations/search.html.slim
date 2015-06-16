@@ -1,9 +1,0 @@
-ul
-- @presentation_outlines.each do |outline|
-  - presentation = outline.presentation
-  li
-    dl
-      dt
-        = link_to(presentation[:original_file], presentation_path(presentation.user.username, presentation.id))
-      dd
-        = highlight(excerpt(outline.body, params[:q], radius: 100), params[:q])

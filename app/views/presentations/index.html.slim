@@ -10,5 +10,8 @@
           = image_tag("blank.png")
     .post_content
       - if presentation.presentation_outline
-        = truncate(presentation.presentation_outline.body, length: 100)
+        - if params[:q]
+          = highlight(excerpt(presentation.presentation_outline.body, params[:q], radius: 100), params[:q])
+        - else
+          = truncate(presentation.presentation_outline.body, length: 100)
 .clear

@@ -18,7 +18,9 @@ class PresentationsController < ApplicationController
 
   def search
     search_param = { "query": { "match_phrase": { "body": params[:q] } } }
-    @presentation_outlines = PresentationOutline.search(search_param).records.preload(presentation: :user)
+    presentation_ids = PresentationOutline.search(search_param).map(&:presentation_id)
+    @presentations = Presentation.find(presentation_ids)
+    render "index"
   end
 
   private
