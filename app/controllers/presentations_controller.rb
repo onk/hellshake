@@ -3,7 +3,11 @@ class PresentationsController < ApplicationController
   before_action :set_user, only: [:index, :show]
 
   def index
-    @presentations = @user.presentations.all
+    @presentations = if @user
+                       @user.presentations.all
+                     else
+                       Presentation.all
+                     end
   end
 
   def show
@@ -26,7 +30,9 @@ class PresentationsController < ApplicationController
   private
 
     def set_user
-      @user = User.find_by!(username: params[:username])
+      if params[:username]
+        @user = User.find_by!(username: params[:username])
+      end
     end
 
     def presentation_params
