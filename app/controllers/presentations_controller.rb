@@ -4,10 +4,6 @@ class PresentationsController < ApplicationController
 
   def index
     @presentations = @user.presentations.all
-
-    if current_user
-      @presentation = current_user.presentations.new
-    end
   end
 
   def show
