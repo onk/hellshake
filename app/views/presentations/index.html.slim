@@ -1,27 +1,14 @@
-h1 Presentations#index
-p Find me in app/views/presentations/index.html.slim
-
-= form_tag(presentations_search_path, method: "GET") do
-  = text_field_tag(:q)
-  br
-  = submit_tag "search"
-
-- if current_user
-  = form_for(@presentation) do |f|
-    = f.file_field(:original_file)
-    br
-    = f.submit "upload"
-
-ul
 - @presentations.each do |presentation|
-  li
-    dl
-      dt
-        = link_to(presentation_path(presentation.user.username, presentation.id)) do
-          = presentation[:original_file]
-      dd
+  .entry
+    .photo
+      = link_to(presentation_path(presentation.user.username, presentation.id)) do
+        / TODO: 変換中を表現するメソッドを model に用意
         - if presentation.presentation_outline
-          = image_tag(presentation.png_url, width: 100, aligh: "left")
-          = truncate(presentation.presentation_outline.body, length: 100)
+          = image_tag(presentation.png_url)
         - else
-          | 変換中
+          / TODO: 変換中画像を作る
+          = image_tag("blank.png")
+    .post_content
+      - if presentation.presentation_outline
+        = truncate(presentation.presentation_outline.body, length: 100)
+.clear

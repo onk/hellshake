@@ -1,0 +1,10 @@
+#header
+  / TODO: この辺なんとかする
+  .search
+    = form_tag(presentations_search_path, method: "GET") do
+      = text_field_tag(:q, params[:q], placeholder: "Search", required: true)
+      = submit_tag "検索"
+
+  / TODO: gravater
+  / TODO: ログイン者の presentation 一覧へのリンク
+  .spacer
