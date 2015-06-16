@@ -8,6 +8,8 @@ div
     | &nbsp;/&nbsp;
     span#page_count
 canvas#the-canvas[style="border:1px solid black;"]
+div
+  = simple_format(@presentation.presentation_outline.try(:body))
 
 javascript:
   PDFJS.workerSrc = "/assets/pdfjs-dist/build/pdf.worker.js"
