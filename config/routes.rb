@@ -8,9 +8,10 @@ Rails.application.routes.draw do
   end
   root "welcome#index"
 
+  resources :presentations, only: [:create]
   get "presentations/search"
   scope "/:username" do
-    resources :presentations, only: [:index, :show, :create]
+    resources :presentations, only: [:index, :show]
   end
 
   require "sidekiq/web"
