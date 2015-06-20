@@ -1,0 +1,9 @@
+{
+  "engines": {
+    "node": "latest",
+    "npm": "latest"
+  },
+  "dependencies": {
+    "bower": "latest"
+  }
+}
