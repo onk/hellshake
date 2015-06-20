@@ -16,6 +16,8 @@
 #
 
 class Presentation < ActiveRecord::Base
+  acts_as_taggable
+
   mount_uploader :original_file, PdfUploader
   mount_uploader :pdf_file, PdfUploader
 
