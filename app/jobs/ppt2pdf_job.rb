@@ -12,7 +12,7 @@ class Ppt2pdfJob < ActiveJob::Base
       case ext
       when ".ppt", ".pptx"
         # ppt, pptx -> pdf に libreoffice を使う
-        `soffice --headless --convert-to pdf --outdir #{dir} #{original_file_path}`
+        `#{soffice_path} --headless --convert-to pdf --outdir #{dir} #{original_file_path}`
         pdf_file = Dir.glob("#{dir}/*.pdf").first
         FileUtils.mkdir_p(File.dirname(pdf_file_path))
         FileUtils.mv(pdf_file, pdf_file_path)
@@ -29,5 +29,23 @@ class Ppt2pdfJob < ActiveJob::Base
       Pdf2outlineJob.perform_later(presentation)
       Pdf2pngJob.perform_later(presentation)
     }
+  end
+
+  def soffice_path
+    path = `which soffice`
+    if path.empty?
+      # mac support
+      user_path = "~/Applications/LibreOffice.app/Contents/MacOS/soffice"
+      root_path = "/Applications/LibreOffice.app/Contents/MacOS/soffice"
+      if File.exist?(user_path)
+        user_path
+      elsif File.exist?(root_path)
+        root_path
+      else
+        raise "soffice not found"
+      end
+    else
+      path
+    end
   end
 end
