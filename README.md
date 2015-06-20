@@ -17,9 +17,7 @@ System dependencies
     * npm
 
 * libreoffice (pdf のみアップロードするなら不要)
-* poppler (pdftotext)
-* ghostscript
-* imagemagick
+* poppler (pdftotext,pdftocario)
 
 How to setup
 --------------------------------

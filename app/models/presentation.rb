@@ -25,6 +25,6 @@ class Presentation < ActiveRecord::Base
   has_one :presentation_outline, dependent: :destroy
 
   def png_url
-    pdf_file.url.sub(/pdf$/, "png")
+    pdf_file.url.sub(/\.pdf$/, ".png-01.png")
   end
 end
