@@ -11,13 +11,15 @@ System dependencies
 * mysql v5.x
 * memcached v1.4
 * redis v3.x
-* elasticsearch v1.5
-    * kuromoji analysis plugin v2.5.0
+* elasticsearch v1.x
+    * kuromoji analysis plugin
 * nodejs 0.10.x
     * npm
 
 * libreoffice (pdf のみアップロードするなら不要)
 * poppler (pdftotext,pdftocario)
+
+[https://github.com/onk/sharedoc/blob/master/INSTALL.md](https://github.com/onk/sharedoc/blob/master/INSTALL.md)
 
 How to setup
 --------------------------------
