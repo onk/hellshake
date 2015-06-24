@@ -4,7 +4,7 @@
       = link_to(presentation_path(presentation.user.username, presentation.id)) do
         / TODO: 変換中を表現するメソッドを model に用意
         - if presentation.presentation_outline
-          = image_tag(presentation.png_url)
+          = image_tag(presentation.image_file_url)
         - else
           / TODO: 変換中画像を作る
           = image_tag("blank.png")

@@ -7,6 +7,7 @@
 #  is_public     :boolean          default(FALSE), not null
 #  original_file :string(255)
 #  pdf_file      :string(255)
+#  image_file    :string(255)
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #
@@ -20,11 +21,8 @@ class Presentation < ActiveRecord::Base
 
   mount_uploader :original_file, PdfUploader
   mount_uploader :pdf_file, PdfUploader
+  mount_uploader :image_file, ImageUploader
 
   belongs_to :user
   has_one :presentation_outline, dependent: :destroy
-
-  def png_url
-    pdf_file.url.sub(/\.pdf$/, ".png-01.png")
-  end
 end
