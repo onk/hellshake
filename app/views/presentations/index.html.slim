@@ -1,6 +1,6 @@
 - @presentations.each do |presentation|
-  .entry
-    .photo
+  div
+    div
       = link_to(presentation_path(presentation.user.username, presentation.id)) do
         / TODO: 変換中を表現するメソッドを model に用意
         - if presentation.image_file?
@@ -8,10 +8,9 @@
         - else
           / TODO: 変換中画像を作る
           = image_tag("blank.png")
-    .post_content
+    div
       - if presentation.presentation_outline
         - if params[:q]
           = highlight(excerpt(presentation.presentation_outline.body, params[:q], radius: 100), params[:q])
         - else
           = truncate(presentation.presentation_outline.body, length: 100)
-.clear
