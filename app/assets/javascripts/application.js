@@ -14,4 +14,14 @@
 //= require jquery-ujs
 //= require pdfjs-dist
 //= require pdfjs-dist/build/pdf.worker
+//= require eventEmitter
+//= require eventie
+//= require doc-ready
+//= require matches-selector
+//= require fizzy-ui-utils
+//= require get-style-property
+//= require get-size
+//= require outlayer/item
+//= require outlayer
+//= require masonry
 //= require_tree .

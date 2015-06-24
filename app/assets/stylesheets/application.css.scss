@@ -11,5 +11,7 @@
  * file per style scope.
  *
  *= require normalize.css/normalize.css
+ *= require base
+ *= require app
  *= require_self
  */

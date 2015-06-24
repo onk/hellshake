@@ -1,0 +1,22 @@
+.grid {
+  margin: 0 auto;
+}
+
+.grid-item {
+  width: 250px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+
+  .photo {
+    border-bottom: 1px solid #ccc;
+
+    img {
+      border-radius: 5px 5px 0 0;
+    }
+  }
+
+  .notes {
+    padding: 10px;
+  }
+}
