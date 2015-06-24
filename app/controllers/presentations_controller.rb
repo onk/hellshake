@@ -21,7 +21,7 @@ class PresentationsController < ApplicationController
   end
 
   def search
-    search_param = { "query": { "match": { "body": { "query": params[:q], "operator": "and" } } } }
+    search_param = { query: { match: { body: { query: params[:q], operator: "and" } } } }
     presentation_ids = PresentationOutline.search(search_param).map(&:presentation_id)
     @presentations = Presentation.ordered_find(presentation_ids)
     render "index"
