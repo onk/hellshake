@@ -3,6 +3,7 @@
   "dependencies": {
     "jquery": "2.1.4",
     "jquery-ujs": "1.0.3",
-    "pdfjs-dist": "1.1.205"
+    "pdfjs-dist": "1.1.205",
+    "normalize.css": "3.0.3"
   }
 }
