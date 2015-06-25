@@ -2,7 +2,7 @@
   - @presentations.each do |presentation|
     .grid-item
       .photo
-        = link_to(presentation_path(presentation.user.username, presentation.id)) do
+        = link_to(public_presentation_path(presentation.user.username, presentation.id)) do
           / TODO: 変換中を表現するメソッドを model に用意
           - if presentation.image_file?
             = image_tag(presentation.image_file_url)

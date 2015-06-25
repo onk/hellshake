@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :presentations, only: [:create]
   get "presentations/search"
   scope "/:username" do
-    resources :presentations, only: [:index, :show]
+    resources :presentations, only: [:index, :show], as: :public_presentation
   end
 
   require "sidekiq/web"
