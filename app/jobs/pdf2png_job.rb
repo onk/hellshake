@@ -11,6 +11,7 @@ class Pdf2pngJob < ActiveJob::Base
 
       # https://github.com/carrierwaveuploader/carrierwave/wiki/How-to:-%22Upload%22-from-a-local-file
       # carrier_wave 内で close が呼ばれる
+      presentation = Presentation.lock.find(presentation.id)
       presentation.image_file = File.open("#{dir}/#{png_basename}.png")
       presentation.save!
     }

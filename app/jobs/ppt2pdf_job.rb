@@ -23,6 +23,7 @@ class Ppt2pdfJob < ActiveJob::Base
       else
         raise "unknown file type: #{ext}"
       end
+      presentation = Presentation.lock.find(presentation.id)
       presentation[:pdf_file] = pdf_file_name
       presentation.save!
 

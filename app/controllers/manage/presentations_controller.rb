@@ -18,7 +18,7 @@ module Manage
     end
 
     def update
-      @presentation = current_user.presentations.find(params[:id])
+      @presentation = current_user.presentations.lock.find(params[:id])
       if @presentation.update(update_presentation_params)
         redirect_to manage_presentations_path
       else
