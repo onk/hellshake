@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   root "presentations#index"
 
   namespace :manage do
-    resources :presentations, only: [:create]
+    resources :presentations, only: [:index, :create, :edit, :update]
   end
   get "presentations/search"
   scope "/:username" do

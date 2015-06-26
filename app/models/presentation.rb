@@ -27,4 +27,8 @@ class Presentation < ActiveRecord::Base
   has_one :presentation_outline, dependent: :destroy
 
   scope :is_public, -> { where(is_public: true) }
+
+  def owner?(user)
+    user_id == user.try!(:id)
+  end
 end

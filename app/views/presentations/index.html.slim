@@ -1,6 +1,6 @@
 .grid
   - @presentations.each do |presentation|
-    .grid-item
+    .grid-item[class=("draft" unless presentation.is_public)]
       .photo
         = link_to(presentation_path(presentation.user.username, presentation.id)) do
           / TODO: 変換中を表現するメソッドを model に用意
@@ -15,3 +15,6 @@
             = highlight(excerpt(presentation.presentation_outline.body, params[:q], radius: 100), params[:q])
           - else
             = truncate(presentation.presentation_outline.body, length: 100)
+      - if presentation.owner?(current_user)
+        .edit
+          = link_to("編集", edit_manage_presentation_path(presentation))
