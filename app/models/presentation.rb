@@ -25,4 +25,6 @@ class Presentation < ActiveRecord::Base
 
   belongs_to :user
   has_one :presentation_outline, dependent: :destroy
+
+  scope :is_public, -> { where(is_public: true) }
 end
