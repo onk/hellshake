@@ -13,7 +13,7 @@ html
     / TODO: アップロードは右上に常にボタンがあって、押したらポップアップで投稿フォームかなぁ
     - if current_user
       div
-        = form_for(current_user.presentations.new) do |f|
+        = form_for(current_user.presentations.new, url: manage_presentations_path) do |f|
           = f.file_field(:original_file)
           br
           = f.submit "upload"
