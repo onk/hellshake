@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  require "sidekiq/web"
+  mount Sidekiq::Web => "admin/sidekiq"
+
   devise_for :users, skip: [:registration], controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
   devise_scope :user do
     post "users",   to: "users/registrations#create", as: :user_registration
@@ -16,7 +19,4 @@ Rails.application.routes.draw do
     get "/" => "users#show", as: :user
     get "/:id" => "presentations#show", as: :presentation
   end
-
-  require "sidekiq/web"
-  mount Sidekiq::Web => "/sidekiq"
 end
