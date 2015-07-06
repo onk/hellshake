@@ -32,7 +32,7 @@ class Ppt2pdfJob < ActiveJob::Base
   end
 
   def soffice_path
-    path = `which soffice`
+    path = `which soffice`.chomp
     if path.empty?
       # mac support
       user_path = "~/Applications/LibreOffice.app/Contents/MacOS/soffice"
