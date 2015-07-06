@@ -13,7 +13,7 @@ div
   = simple_format(@presentation.presentation_outline.try(:body))
 
 javascript:
-  PDFJS.workerSrc = "/assets/pdfjs-dist/build/pdf.worker.js"
+  PDFJS.workerSrc = "#{compute_asset_path("pdfjs-dist/build/pdf.worker.js")}";
   var url = "#{@presentation.pdf_file.url}";
 
   var pdfDoc = null,
