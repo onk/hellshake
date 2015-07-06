@@ -24,7 +24,7 @@ class Ppt2pdfJob < ActiveJob::Base
         raise "unknown file type: #{ext}"
       end
       presentation[:pdf_file] = pdf_file_name
-      presentation.save
+      presentation.save!
 
       Pdf2outlineJob.perform_later(presentation)
       Pdf2pngJob.perform_later(presentation)
