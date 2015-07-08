@@ -23,6 +23,7 @@ gem "ordered_find"
 gem "reserved_word"
 gem "sass-rails"
 gem "sidekiq"
+gem "simple_form"
 gem "sinatra", require: false
 gem "slim-rails"
 gem "uglifier"
