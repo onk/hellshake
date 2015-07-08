@@ -1,12 +1,4 @@
-= form_for(@presentation, url: manage_presentation_path(@presentation)) do |f|
-  - if @presentation.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@presentation.errors.count, "error")} prohibited this presentation from being saved:"
-      ul
-        - @presentation.errors.full_messages.each do |message|
-          li = message
-
-  .field
-    = f.label :is_public
-    = f.check_box :is_public
-  .actions = f.submit
+= simple_form_for(@presentation, url: manage_presentation_path(@presentation)) do |f|
+  = f.error_notification
+  = f.input :is_public
+  = f.button :submit
