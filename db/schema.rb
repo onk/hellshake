@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150624041358) do
+ActiveRecord::Schema.define(version: 20150708183859) do
 
   create_table "presentation_outlines", force: :cascade do |t|
     t.integer  "presentation_id", limit: 4,        null: false
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20150624041358) do
 
   create_table "presentations", force: :cascade do |t|
     t.integer  "user_id",       limit: 4,                   null: false
+    t.string   "title",         limit: 255,                 null: false
     t.boolean  "is_public",     limit: 1,   default: false, null: false
     t.string   "original_file", limit: 255
     t.string   "pdf_file",      limit: 255

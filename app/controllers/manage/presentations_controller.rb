@@ -18,19 +18,25 @@ module Manage
     end
 
     def update
-      presentation = current_user.presentations.find(params[:id])
-      presentation.update(update_presentation_params)
-      redirect_to manage_presentations_path
+      @presentation = current_user.presentations.find(params[:id])
+      if @presentation.update(update_presentation_params)
+        redirect_to manage_presentations_path
+      else
+        render :edit
+      end
     end
 
     private
 
       def create_presentation_params
-        params.require(:presentation).permit(:original_file)
+        # FIXIME: params 書き換えるのがイマイチ
+        title = File.basename(params[:presentation][:original_file].original_filename, ".*")
+        params[:presentation][:title] = title
+        params.require(:presentation).permit(:title, :original_file)
       end
 
       def update_presentation_params
-        params.require(:presentation).permit(:is_public)
+        params.require(:presentation).permit(:title, :is_public)
       end
   end
 end

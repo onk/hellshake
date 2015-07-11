@@ -9,6 +9,8 @@ div
     span#page_count
 canvas#the-canvas[style="border:1px solid black;"]
 
+h1
+  = @presentation.title
 div
   = simple_format(@presentation.presentation_outline.try(:body))
 
