@@ -2,7 +2,7 @@ class PresentationsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @presentations = Presentation.is_public.all
+    @presentations = Presentation.preload(:user).is_public.all
   end
 
   def show

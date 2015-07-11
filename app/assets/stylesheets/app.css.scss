@@ -21,6 +21,22 @@
       padding: 6px 10px;
     }
   }
+  .owner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 6px 10px;
+    a {
+      color: #fff;
+      text-decoration: none;
+      vertical-align: top;
+      text-shadow: 0 0 0.8em #000;
+    }
+    img {
+      border-radius: 2px;
+      margin-right: 8px;
+    }
+  }
 
   .notes {
     padding: 6px 10px;

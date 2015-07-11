@@ -3,7 +3,7 @@ module Manage
     before_action :authenticate_user!
 
     def index
-      @presentations = current_user.presentations
+      @presentations = current_user.presentations.preload(:user)
       render "presentations/index"
     end
 

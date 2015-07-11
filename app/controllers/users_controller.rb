@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by!(username: params[:username])
-    @presentations = @user.presentations.is_public.all
+    @presentations = @user.presentations.preload(:user).is_public.all
     render "presentations/index"
   end
 end

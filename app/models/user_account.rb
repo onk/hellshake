@@ -6,6 +6,7 @@
 #  user_id          :integer          not null
 #  provider         :string(255)      not null
 #  uid              :string(255)      not null
+#  image_url        :string(255)      not null
 #  token            :string(511)      not null
 #  token_secret     :string(255)
 #  token_expires_at :datetime
@@ -23,6 +24,7 @@ class UserAccount < ActiveRecord::Base
 
   def build_auth_info(omniauth)
     self.token = omniauth["credentials"]["token"]
+    self.image_url = omniauth["info"]["image"]
     if omniauth["credentials"]["expires_at"]
       self.token_expires_at = Time.at(omniauth["credentials"]["expires_at"])
     end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150708183859) do
+ActiveRecord::Schema.define(version: 20150708183900) do
 
   create_table "presentation_outlines", force: :cascade do |t|
     t.integer  "presentation_id", limit: 4,        null: false
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20150708183859) do
     t.integer  "user_id",          limit: 4,   null: false
     t.string   "provider",         limit: 255, null: false
     t.string   "uid",              limit: 255, null: false
+    t.string   "image_url",        limit: 255, null: false
     t.string   "token",            limit: 511, null: false
     t.string   "token_secret",     limit: 255
     t.datetime "token_expires_at"

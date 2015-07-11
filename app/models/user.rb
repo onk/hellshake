@@ -27,4 +27,8 @@ class User < ActiveRecord::Base
 
   has_many :presentations
   has_many :user_accounts, dependent: :destroy, autosave: true
+
+  def image_url
+    user_accounts.first.image_url
+  end
 end

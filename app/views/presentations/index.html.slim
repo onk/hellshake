@@ -16,6 +16,8 @@
             = highlight(excerpt(presentation.presentation_outline.body, params[:q], radius: 100), params[:q])
           - else
             = truncate(presentation.presentation_outline.body, length: 100)
+      .owner
+        = name_with_avatar(presentation.user)
       - if presentation.owner?(current_user)
         .edit
           = link_to("編集", edit_manage_presentation_path(presentation))
