@@ -5,6 +5,7 @@
     "jquery-ujs": "1.0.3",
     "pdfjs-dist": "1.1.205",
     "masonry": "3.3.0",
-    "normalize.css": "3.0.3"
+    "normalize.css": "3.0.3",
+    "materialize": "0.97.0"
   }
 }

@@ -6,3 +6,4 @@ asset "pdfjs-dist", "1.1.205"
 asset "masonry", "3.3.0"
 
 asset "normalize.css", "3.0.3"
+asset "materialize", "0.97.0"
