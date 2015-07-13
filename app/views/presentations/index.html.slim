@@ -21,5 +21,5 @@
       .owner
         = name_with_avatar(presentation.user)
       - if presentation.owner?(current_user)
-        .card-action.text--right
+        .card-action.right-align
           = link_to("編集", edit_manage_presentation_path(presentation))
