@@ -10,3 +10,13 @@ body {
 .vertical--middle {
   vertical-align: middle;
 }
+
+/* override materialize default style */
+.card .card-content .card-title {
+  line-height: inherit;
+  font-size: 18px;
+}
+.card .card-content,
+.card .card-action {
+  padding: 10px;
+}
