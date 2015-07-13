@@ -8,12 +8,23 @@ html
     = csrf_meta_tags
   body
     = render "layouts/header"
-    div
+    .section
       = yield
-    / TODO: アップロードは右上に常にボタンがあって、押したらポップアップで投稿フォームかなぁ
-    - if current_user
-      div
-        = form_for(current_user.presentations.new, url: manage_presentations_path) do |f|
-          = f.file_field(:original_file)
-          br
-          = f.submit "upload"
+    footer.page-footer.teal
+      .container
+        .row
+          .col.l6
+            h5.white-text 使い方
+            p.white-text 右のフォームからアップロードしてください
+            p.white-text 数分後に PDF 化されて見られるようになります
+          .col.l6
+            h5.white-text アップロードフォーム
+            - if current_user
+              = form_for(current_user.presentations.new, url: manage_presentations_path) do |f|
+                = f.file_field(:original_file)
+                = f.submit "upload"
+            - else
+              p ログインすると使うことができます
+      .footer-copyright
+        .container
+          | 要望は #{link_to("githab の issue", "https://github.com/onk/sharedoc/issues", class: "brown-text text-lighten-3")} にどうぞ

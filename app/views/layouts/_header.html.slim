@@ -1,9 +1,9 @@
-#header
-  / TODO: この辺なんとかする
-  div
-    = form_tag(presentations_search_path, method: "GET") do
-      = text_field_tag(:q, params[:q], placeholder: "Search", required: true)
-      = submit_tag "検索"
-
-  / TODO: gravater
-  / TODO: ログイン者の presentation 一覧へのリンク
+nav.white
+  .nav-wrapper.container
+    = link_to("Sharedoc", root_url, class: "brand-logo")
+    ul.right
+      li
+        = form_tag(presentations_search_path, method: "GET") do
+          = text_field_tag(:q, params[:q], placeholder: "Search", required: true)
+      li
+        = name_with_avatar(current_user)
