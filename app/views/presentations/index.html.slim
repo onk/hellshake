@@ -1,6 +1,6 @@
 .grid
   - @presentations.each do |presentation|
-    .card.grid-item[class=("blue-grey" unless presentation.is_public)]
+    .card.grid-item.hoverable[class=("blue-grey" unless presentation.is_public)]
       .card-image.small
         = link_to(presentation_path(presentation.user.username, presentation.id)) do
           = presentation_image_tag(presentation)
