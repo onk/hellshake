@@ -7,6 +7,6 @@ nav.white
           = text_field_tag(:q, params[:q], placeholder: "Search", required: true)
       - if current_user
         li
-          = link_to(manage_presentations_path)
-            = image_tag(current_user.image_url, size: "32x32", class: "margin--r5 vertical--middle")
-            = current_user.name
+          = link_to(manage_presentations_path, class: "valign-wrapper")
+            = image_tag(current_user.image_url, size: "32x32", class: "margin--r5 valign")
+            span.valign = current_user.name

@@ -1,6 +1,8 @@
 module ApplicationHelper
   def name_with_avatar(user)
-    image_tag(user.image_url, size: "24x24") + link_to(user.name, user_path(username: user.username))
+    content_tag(:span, class: "valign-wrapper") do
+      image_tag(user.image_url, size: "24x24", class: "valign") + link_to(user.name, user_path(username: user.username), class: "valign")
+    end
   end
 
   def presentation_image_tag(presentation)
