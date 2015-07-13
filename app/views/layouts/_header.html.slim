@@ -5,5 +5,6 @@ nav.white
       li
         = form_tag(presentations_search_path, method: "GET") do
           = text_field_tag(:q, params[:q], placeholder: "Search", required: true)
-      li
-        = name_with_avatar(current_user)
+      - if current_user
+        li
+          = name_with_avatar(current_user)
