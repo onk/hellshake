@@ -11,6 +11,10 @@ body {
   vertical-align: middle;
 }
 
+.blockimage {
+  display: block;
+}
+
 /* override materialize default style */
 .card .card-content .card-title {
   line-height: inherit;

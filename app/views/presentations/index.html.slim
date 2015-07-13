@@ -5,10 +5,10 @@
         = link_to(presentation_path(presentation.user.username, presentation.id)) do
           / TODO: 変換中を表現するメソッドを model に用意
           - if presentation.image_file?
-            = image_tag(presentation.image_file_url)
+            = image_tag(presentation.image_file_url, class: "blockimage")
           - else
             / TODO: 変換中画像を作る
-            = image_tag("blank.png")
+            = image_tag("blank.png", class: "blockimage")
 
       .card-content
         .card-title.black-text
