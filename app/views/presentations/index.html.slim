@@ -1,7 +1,7 @@
 .grid
   - @presentations.each do |presentation|
-    .grid-item[class=("draft" unless presentation.is_public)]
-      .photo
+    .card.grid-item[class=("blue-grey" unless presentation.is_public)]
+      .card-image.small
         = link_to(presentation_path(presentation.user.username, presentation.id)) do
           / TODO: 変換中を表現するメソッドを model に用意
           - if presentation.image_file?
@@ -9,15 +9,17 @@
           - else
             / TODO: 変換中画像を作る
             = image_tag("blank.png")
-          h3 = presentation.title
-      .notes
+
+      .card-content
+        .card-title.black-text
+          = presentation.title
         - if presentation.presentation_outline
           - if params[:q]
-            = highlight(excerpt(presentation.presentation_outline.body, params[:q], radius: 100), params[:q])
+            p = highlight(excerpt(presentation.presentation_outline.body, params[:q], radius: 100), params[:q])
           - else
-            = truncate(presentation.presentation_outline.body, length: 100)
+            p = truncate(presentation.presentation_outline.body, length: 100)
       .owner
         = name_with_avatar(presentation.user)
       - if presentation.owner?(current_user)
-        .edit
+        .card-action.text--right
           = link_to("編集", edit_manage_presentation_path(presentation))

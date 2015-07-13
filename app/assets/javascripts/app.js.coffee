@@ -3,7 +3,7 @@ $ ->
   $(window).load ->
     new Masonry(".grid", {
         itemSelector: ".grid-item",
-        columnWidth: 250,
+        columnWidth: 300,
         gutter: 10,
         isFitWidth: true
       }

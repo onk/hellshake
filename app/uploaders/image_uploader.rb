@@ -1,6 +1,6 @@
 class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
-  resize_to_fit(250, "") # 横250px にリサイズ
+  resize_to_fit(300, "") # 横300px にリサイズ
 
   storage :file
 
