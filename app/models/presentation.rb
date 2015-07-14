@@ -30,7 +30,8 @@ class Presentation < ActiveRecord::Base
 
   scope :is_public, -> { where(is_public: true) }
 
-  validates :title, presence: true
+  validates :title,        presence: true
+  validates :published_at, presence: true
 
   def owner?(user)
     user_id == user.try!(:id)

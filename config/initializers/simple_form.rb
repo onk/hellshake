@@ -164,3 +164,17 @@ SimpleForm.setup do |config|
   # Defines which i18n scope will be used in Simple Form.
   # config.i18n_scope = 'simple_form'
 end
+
+# datepicker 対応
+module SimpleForm
+  module Inputs
+    class DatepickerInput < StringInput
+      def input(wrapper_options = nil)
+        input_html_options[:type] = "date"
+        input_html_options[:value] = I18n.l(object[attribute_name], format: :date)
+        merged_input_options = merge_wrapper_options(input_html_options, wrapper_options)
+        @builder.text_field(attribute_name, merged_input_options)
+      end
+    end
+  end
+end

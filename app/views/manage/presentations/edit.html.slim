@@ -5,6 +5,7 @@
         = f.error_notification
         .form-inputs
           = f.input :title
+          = f.input :published_at, as: :datepicker
           = f.input :is_public
         .form-actions.right-align
           = f.button :submit
