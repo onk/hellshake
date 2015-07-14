@@ -8,6 +8,8 @@
       .card-content
         .card-title.black-text
           = presentation.title
+        .published_at
+          = l(presentation.published_at, format: :date)
         - if presentation.presentation_outline
           - if params[:q]
             p = highlight(excerpt(presentation.presentation_outline.body, params[:q], radius: 100), params[:q])
