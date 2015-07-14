@@ -32,7 +32,8 @@ module Manage
         # FIXIME: params 書き換えるのがイマイチ
         title = File.basename(params[:presentation][:original_file].original_filename, ".*")
         params[:presentation][:title] = title
-        params.require(:presentation).permit(:title, :original_file)
+        params[:presentation][:published_at] = Time.current
+        params.require(:presentation).permit(:title, :original_file, :published_at)
       end
 
       def update_presentation_params
