@@ -9,6 +9,7 @@
 #  original_file :string(255)
 #  pdf_file      :string(255)
 #  image_file    :string(255)
+#  published_at  :datetime         not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #
