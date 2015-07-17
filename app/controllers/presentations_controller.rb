@@ -2,7 +2,10 @@ class PresentationsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @presentations = Presentation.preload(:user).is_public.paginate(page: params[:page])
+    @presentations = Presentation.preload(:user).
+                     is_public.
+                     published_at_desc.
+                     paginate(page: params[:page])
   end
 
   def show

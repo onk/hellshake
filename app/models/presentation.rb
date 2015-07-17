@@ -29,6 +29,7 @@ class Presentation < ActiveRecord::Base
   has_one :presentation_outline, dependent: :destroy
 
   scope :is_public, -> { where(is_public: true) }
+  scope :published_at_desc, -> { order(published_at: :desc) }
 
   validates :title,        presence: true
   validates :published_at, presence: true

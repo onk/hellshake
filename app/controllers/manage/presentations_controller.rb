@@ -3,7 +3,9 @@ module Manage
     before_action :authenticate_user!
 
     def index
-      @presentations = current_user.presentations.preload(:user).paginate(page: params[:page])
+      @presentations = current_user.presentations.preload(:user).
+                       published_at_desc.
+                       paginate(page: params[:page])
       render "presentations/index"
     end
 
