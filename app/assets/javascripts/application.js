@@ -25,4 +25,4 @@
 //= require outlayer
 //= require masonry
 //= require materialize
-//= require_tree .
+//= require app
