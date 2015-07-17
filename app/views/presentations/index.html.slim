@@ -1,3 +1,5 @@
+= paginate(@presentations)
+
 .grid
   - @presentations.each do |presentation|
     .card.grid-item.hoverable[class=("blue-grey" unless presentation.is_public)]
@@ -20,3 +22,5 @@
       - if presentation.owner?(current_user)
         .card-action.right-align
           = link_to("編集", edit_manage_presentation_path(presentation))
+
+= paginate(@presentations)

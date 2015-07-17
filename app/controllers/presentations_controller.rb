@@ -2,7 +2,7 @@ class PresentationsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @presentations = Presentation.preload(:user).is_public.all
+    @presentations = Presentation.preload(:user).is_public.paginate(page: params[:page])
   end
 
   def show
@@ -13,7 +13,7 @@ class PresentationsController < ApplicationController
   def search
     search_param = { query: { match: { body: { query: params[:q], operator: "and" } } } }
     presentation_ids = PresentationOutline.search(search_param).map(&:presentation_id)
-    @presentations = Presentation.is_public.ordered_find_by_id(presentation_ids).compact
+    @presentations = Presentation.is_public.ordered_find_by_id(presentation_ids).compact.paginate(page: params[:page])
     render "index"
   end
 end
