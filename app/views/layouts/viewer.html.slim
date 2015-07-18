@@ -9,8 +9,8 @@ html[dir="ltr" mozdisallowselectionprint moznomarginboxes]
     = stylesheet_link_tag 'pdf.js/web/viewer'
     link[rel="resource" type="application/l10n" href="locale/locale.properties"]
     = javascript_include_tag 'pdf.js/viewer_before'
-    script
-      | PDFJS.workerSrc = '../src/worker_loader.js';
+    javascript:
+      PDFJS.workerSrc = "#{compute_asset_path("pdfjs-dist/build/pdf.worker.js")}";
     = javascript_include_tag 'pdf.js/viewer_after'
   body.loadingInProgress[tabindex="1"]
     #outerContainer
