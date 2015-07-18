@@ -11,6 +11,7 @@ class PresentationsController < ApplicationController
   def show
     @user = User.find_by!(username: params[:username])
     @presentation = @user.presentations.is_public.find(params[:id])
+    render layout: "viewer"
   end
 
   def search
