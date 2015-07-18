@@ -12,8 +12,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-@import url(text_layer_builder.css);
-@import url(annotations_layer_builder.css);
+@import "text_layer_builder";
+@import "annotations_layer_builder";
 
 .pdfViewer .canvasWrapper {
   overflow: hidden;
