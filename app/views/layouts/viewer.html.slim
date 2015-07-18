@@ -10,6 +10,7 @@ html[dir="ltr" mozdisallowselectionprint moznomarginboxes]
     link[rel="resource" type="application/l10n" href="locale/locale.properties"]
     = javascript_include_tag 'pdf.js/viewer_before'
     javascript:
+      var DEFAULT_URL = "#{@presentation.pdf_file.url}";
       PDFJS.workerSrc = "#{compute_asset_path("pdfjs-dist/build/pdf.worker.js")}";
     = javascript_include_tag 'pdf.js/viewer_after'
   body.loadingInProgress[tabindex="1"]
