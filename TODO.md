@@ -11,9 +11,5 @@ TODO
     -   サービスの方針に合わなかったらオミットするかもー
 
 -   [ ] タグ検索
--   [ ] published_at を設定可能に
 -   [ ] description を設定可能に
 -   [ ] title, description を検索対象に含める
--   [ ] 詳細ページの PDF.js 周りを使いやすく
--   [ ] original_file のダウンロードリンク
--   [ ] ページネーションとか
