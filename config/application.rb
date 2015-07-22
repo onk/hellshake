@@ -42,5 +42,8 @@ module Sharedoc
 
     # The Active Job adapter must be set to :sidekiq or it will simply use the default :inline.
     config.active_job.queue_adapter = :sidekiq
+
+    # autoload libs
+    config.autoload_paths += Dir[Rails.root.join("lib/autoload")]
   end
 end
