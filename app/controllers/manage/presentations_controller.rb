@@ -26,6 +26,9 @@ module Manage
       else
         render :edit
       end
+    rescue ActiveRecord::RecordNotUnique # uniqueness validation は mysql に任せる
+      @presentation.errors.add(:slug, I18n.t("errors.messages.taken"))
+      render :edit
     end
 
     private
@@ -46,7 +49,7 @@ module Manage
       end
 
       def update_presentation_params
-        params.require(:presentation).permit(:title, :is_public, :published_at)
+        params.require(:presentation).permit(:title, :is_public, :published_at, :slug)
       end
   end
 end
