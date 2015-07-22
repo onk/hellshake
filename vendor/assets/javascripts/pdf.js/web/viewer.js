@@ -42,7 +42,8 @@ PDFJS.imageResourcesPath = './images/';
 //PDFJS.workerSrc = '../build/pdf.worker.js';
 //#endif
 //#if !PRODUCTION
-PDFJS.cMapUrl = '../external/bcmaps/';
+// PDFJS.cMapUrl = '../external/bcmaps/';
+PDFJS.cMapUrl = '/external/bcmaps/';
 PDFJS.cMapPacked = true;
 //#else
 //PDFJS.cMapUrl = '../web/cmaps/';
