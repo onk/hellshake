@@ -86,3 +86,13 @@ pdf をテキストにしたり画像にしたり
 ```sh
 $ brew install poppler
 ```
+
+mecab
+--------------------------------
+
+文字列の形態素解析
+
+```sh
+$ brew install mecab
+$ brew install mecab-ipadic
+```

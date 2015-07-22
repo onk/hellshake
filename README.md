@@ -15,6 +15,7 @@ System dependencies
     * kuromoji analysis plugin
 * nodejs 0.10.x
     * npm
+* mecab
 
 * libreoffice (pdf のみアップロードするなら不要)
 * poppler (pdftotext,pdftocario)
