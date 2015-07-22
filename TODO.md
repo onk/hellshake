@@ -13,3 +13,4 @@ TODO
 -   [ ] タグ検索
 -   [ ] description を設定可能に
 -   [ ] title, description を検索対象に含める
+-   [ ] diita に貼り付けられるように (iframe?)
