@@ -17,6 +17,6 @@ Rails.application.routes.draw do
   get "presentations/search"
   scope "/:username" do
     get "/" => "users#show", as: :user
-    get "/:id" => "presentations#show", as: :presentation
+    get "/:slug" => "presentations#show", as: :presentation
   end
 end
