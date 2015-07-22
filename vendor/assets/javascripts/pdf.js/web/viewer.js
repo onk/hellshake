@@ -496,7 +496,7 @@ var PDFViewerApplication = {
 
     var parameters = {password: password};
     if (typeof file === 'string') { // URL
-      this.setTitleUsingUrl(file);
+      // this.setTitleUsingUrl(file);
       parameters.url = file;
     } else if (file && 'byteLength' in file) { // ArrayBuffer
       parameters.data = file;
@@ -907,9 +907,9 @@ var PDFViewerApplication = {
         pdfTitle = info['Title'];
       }
 
-      if (pdfTitle) {
-        self.setTitle(pdfTitle + ' - ' + document.title);
-      }
+      // if (pdfTitle) {
+      //   self.setTitle(pdfTitle + ' - ' + document.title);
+      // }
 
       if (info.IsAcroFormPresent) {
         console.warn('Warning: AcroForm/XFA is not supported');

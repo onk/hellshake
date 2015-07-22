@@ -5,7 +5,7 @@ html[dir="ltr" mozdisallowselectionprint moznomarginboxes]
     meta[name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"]
     meta[name="google" content="notranslate"]
     title
-      | PDF.js viewer
+      = @presentation.title
     = stylesheet_link_tag 'pdf.js/web/viewer'
     link[rel="resource" type="application/l10n" href="locale/locale.properties"]
     = javascript_include_tag 'pdf.js/viewer_before'
