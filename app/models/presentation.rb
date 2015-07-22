@@ -5,6 +5,7 @@
 #  id            :integer          not null, primary key
 #  user_id       :integer          not null
 #  title         :string(255)      not null
+#  slug          :string(255)      not null
 #  is_public     :boolean          default(FALSE), not null
 #  original_file :string(255)
 #  pdf_file      :string(255)
@@ -16,6 +17,7 @@
 # Indexes
 #
 #  user_id_and_is_public  (user_id,is_public)
+#  user_id_and_slug       (user_id,slug) UNIQUE
 #
 
 class Presentation < ActiveRecord::Base
@@ -32,6 +34,7 @@ class Presentation < ActiveRecord::Base
   scope :published_at_desc, -> { order(published_at: :desc) }
 
   validates :title,        presence: true
+  validates :slug,         presence: true
   validates :published_at, presence: true
 
   def owner?(user)

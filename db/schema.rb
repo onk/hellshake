@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150711201947) do
+ActiveRecord::Schema.define(version: 20150722143541) do
 
   create_table "presentation_outlines", force: :cascade do |t|
     t.integer  "presentation_id", limit: 4,        null: false
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20150711201947) do
   create_table "presentations", force: :cascade do |t|
     t.integer  "user_id",       limit: 4,                   null: false
     t.string   "title",         limit: 255,                 null: false
+    t.string   "slug",          limit: 255,                 null: false
     t.boolean  "is_public",     limit: 1,   default: false, null: false
     t.string   "original_file", limit: 255
     t.string   "pdf_file",      limit: 255
@@ -35,6 +36,7 @@ ActiveRecord::Schema.define(version: 20150711201947) do
   end
 
   add_index "presentations", ["user_id", "is_public"], name: "user_id_and_is_public", using: :btree
+  add_index "presentations", ["user_id", "slug"], name: "user_id_and_slug", unique: true, using: :btree
 
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id",        limit: 4
