@@ -29,3 +29,9 @@ ja:
     # prompts:
     #   defaults:
     #     age: 'Select your age'
+    labels:
+      presentation:
+        title: タイトル
+        published_at: 発表日時 or 公開日時
+        slug: URL 文字列
+        is_public: 公開する
