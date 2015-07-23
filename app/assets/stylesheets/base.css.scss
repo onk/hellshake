@@ -30,3 +30,18 @@ body {
 .picker__select--year.browser-default {
   width: 33%;
 }
+
+.error_notification {
+  color: #F44336;
+  font-weight: 500;
+}
+
+.input-field.field_with_errors {
+  input {
+    border-bottom: 1px solid #F44336;
+    box-shadow: 0px 1px 0px 0px #F44336;
+  }
+  .error {
+    color: #F44336;
+  }
+}
