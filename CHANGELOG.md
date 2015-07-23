@@ -1,5 +1,11 @@
 ## master (unreleased)
-[full changelog](https://github.com/onk/sharedoc/compare/v0.3.0...master)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.3.1...master)
+
+## v0.3.1 (2015-07-23)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.3.0...v0.3.1)
+
+*   フォームの label を localize して分かりやすく
+*   slug の validation 追加
 
 ## v0.3.0 (2015-07-23)
 [full changelog](https://github.com/onk/sharedoc/compare/v0.2.0...v0.3.0)
