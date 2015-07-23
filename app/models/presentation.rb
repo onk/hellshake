@@ -33,8 +33,9 @@ class Presentation < ActiveRecord::Base
   scope :is_public, -> { where(is_public: true) }
   scope :published_at_desc, -> { order(published_at: :desc) }
 
+  VALID_SLUG_REGEX = /\A[0-9A-Za-z\-_]+\z/ # 英数と - _ の 2 つの半角記号
   validates :title,        presence: true
-  validates :slug,         presence: true
+  validates :slug,         presence: true, format: { with: VALID_SLUG_REGEX, message: "英数と-_ のみで入力してください" }
   validates :published_at, presence: true
 
   def owner?(user)
