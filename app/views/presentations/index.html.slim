@@ -20,6 +20,9 @@
             p = highlight(excerpt(presentation.presentation_outline.body, params[:q], radius: 100), params[:q])
           - else
             p = truncate(presentation.presentation_outline.body, length: 100)
+      .card-content
+        - presentation.tag_list.each do |tag|
+          span.tag = tag
       .owner
         = name_with_avatar(presentation.user)
       - if presentation.owner?(current_user)
