@@ -49,7 +49,7 @@ module Manage
       end
 
       def update_presentation_params
-        params.require(:presentation).permit(:title, :is_public, :published_at, :slug)
+        params.require(:presentation).permit(:title, :is_public, :published_at, :slug, :tag_list)
       end
   end
 end
