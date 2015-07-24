@@ -8,7 +8,7 @@
           = f.input :published_at, as: :datepicker
           = f.input :slug
           = f.input :is_public
-          = f.input :tag_list
+          = f.input :tag_list, input_html: { value: @presentation.tag_list.join(","), class: "tagit" }
         .form-actions.right-align
           = f.button :submit
     .col.l6

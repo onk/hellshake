@@ -5,6 +5,8 @@
     "jquery-ujs": "1.0.3",
     "pdfjs-dist": "1.1.205",
     "masonry": "3.3.0",
+    "jquery-ui": "1.11.4",
+    "jquery-tagit": "6ccd2de95e",
     "materialize": "0.97.0"
   }
 }

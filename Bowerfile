@@ -4,5 +4,7 @@ asset "jquery", "2.1.4"
 asset "jquery-ujs", "1.0.3"
 asset "pdfjs-dist", "1.1.205"
 asset "masonry", "3.3.0"
+asset "jquery-ui", "1.11.4"
+asset "jquery-tagit", "6ccd2de95e"
 
 asset "materialize", "0.97.0"

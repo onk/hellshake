@@ -25,4 +25,6 @@
 //= require outlayer
 //= require masonry
 //= require materialize
+//= require jquery-ui
+//= require jquery-tagit/js/tag-it
 //= require app

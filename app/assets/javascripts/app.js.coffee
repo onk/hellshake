@@ -17,3 +17,4 @@ $ ->
     selectMonths: true,
     clear: false
   )
+  $(".tagit").tagit()
