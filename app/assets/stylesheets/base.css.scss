@@ -45,3 +45,7 @@ body {
     color: #F44336;
   }
 }
+
+[type="checkbox"] + label {
+  margin: 0 0 15px 0;
+}
