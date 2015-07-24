@@ -1,5 +1,12 @@
 ## master (unreleased)
-[full changelog](https://github.com/onk/sharedoc/compare/v0.3.1...master)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.4.0...master)
+
+## v0.4.0 (2015-07-24)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.3.1...v0.4.0)
+
+*   タグ機能を追加
+*   非公開のスライドを表示しようとするとエラーになるのでリンク削除
+*   入力エラー時にエラーを目立たせた
 
 ## v0.3.1 (2015-07-23)
 [full changelog](https://github.com/onk/sharedoc/compare/v0.3.0...v0.3.1)
