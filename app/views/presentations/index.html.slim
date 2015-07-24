@@ -4,7 +4,10 @@
   - @presentations.each do |presentation|
     .card.grid-item.hoverable[class=("blue-grey" unless presentation.is_public)]
       .card-image.small
-        = link_to(presentation_path(presentation.user.username, presentation.slug)) do
+        - if presentation.is_public
+          = link_to(presentation_path(presentation.user.username, presentation.slug)) do
+            = presentation_image_tag(presentation)
+        - else
           = presentation_image_tag(presentation)
       .divider
       .card-content
