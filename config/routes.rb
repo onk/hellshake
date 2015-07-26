@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   namespace :manage do
     resources :presentations, only: [:index, :create, :edit, :update]
   end
+  resources :tags, only: [:show], param: :name
   get "presentations/search"
   scope "/:username" do
     get "/" => "users#show", as: :user

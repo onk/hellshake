@@ -22,7 +22,7 @@
             p = truncate(presentation.presentation_outline.body, length: 100)
       .card-content
         - presentation.tag_list.each do |tag|
-          span.tag = tag
+          = link_to(tag, tag_path(name: tag), class: "tag")
       .owner
         = name_with_avatar(presentation.user)
       - if presentation.owner?(current_user)
