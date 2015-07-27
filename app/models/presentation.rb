@@ -21,6 +21,8 @@
 #
 
 class Presentation < ActiveRecord::Base
+  include Presentation::SearchModule
+
   acts_as_taggable
 
   mount_uploader :original_file, PdfUploader
