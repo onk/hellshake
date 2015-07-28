@@ -1,5 +1,17 @@
 ## master (unreleased)
-[full changelog](https://github.com/onk/sharedoc/compare/v0.4.0...master)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.5.1...master)
+
+## v0.5.1 (2015-07-28)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.5.0...v0.5.1)
+
+*   zipang の生成ルールと slug の validation とを合わせる
+*   tag 検索の表示順を published_at desc に修正
+
+## v0.5.0 (2015-07-27)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.4.0...v0.5.0)
+
+*   詳細ページから "Open File" ボタンを隠す
+*   タグ検索機能を実装
 
 ## v0.4.0 (2015-07-24)
 [full changelog](https://github.com/onk/sharedoc/compare/v0.3.1...v0.4.0)
