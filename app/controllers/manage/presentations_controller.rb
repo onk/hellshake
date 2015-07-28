@@ -10,7 +10,7 @@ module Manage
     end
 
     def create
-      presentation = current_user.presentations.create(create_presentation_params)
+      presentation = current_user.presentations.create!(create_presentation_params)
       Ppt2pdfJob.perform_later(presentation)
       redirect_to edit_manage_presentation_path(presentation)
     end
