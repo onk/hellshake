@@ -1,4 +1,5 @@
-= paginate(@presentations)
+.container
+  = paginate(@presentations)
 
 .grid
   - @presentations.each do |presentation|
@@ -29,4 +30,5 @@
         .card-action.right-align
           = link_to("編集", edit_manage_presentation_path(presentation))
 
-= paginate(@presentations)
+.container
+  = paginate(@presentations)
