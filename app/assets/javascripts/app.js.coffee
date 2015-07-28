@@ -4,7 +4,7 @@ $ ->
     if $(".grid").length > 0
       new Masonry(".grid", {
           itemSelector: ".grid-item",
-          columnWidth: 300,
+          columnWidth: 250,
           gutter: 10,
           isFitWidth: true
         }
