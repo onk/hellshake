@@ -1,5 +1,20 @@
 ## master (unreleased)
-[full changelog](https://github.com/onk/sharedoc/compare/v0.5.1...master)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.5.3...master)
+
+## v0.5.3 (2015-07-31)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.5.2...v0.5.3)
+
+*   copy fonts to public path
+*   DB のパスワードをコミットしないようにする
+*   表紙画像の横幅 250px の方がかわいい
+
+## v0.5.2 (2015-07-29)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.5.1...v0.5.2)
+
+*   スマホで見た時用に viewport 指定入れる
+*   名前の全角空白が気になりすぎるので半角スペースに置換
+*   プレゼン上に乗ってる名前が読めないので css 修正
+*   validation error を分かりやすくする
 
 ## v0.5.1 (2015-07-28)
 [full changelog](https://github.com/onk/sharedoc/compare/v0.5.0...v0.5.1)
