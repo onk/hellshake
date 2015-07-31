@@ -11,5 +11,15 @@
           = f.input :tag_list, input_html: { value: @presentation.tag_list.join(","), class: "tagit" }
         .form-actions.right-align
           = f.button :submit
+          .btn-floating.btn-large.red.modal-trigger[data-target="delete_form"]
+            | 削除
     .col.l6
       = presentation_image_tag(@presentation)
+
+    #delete_form.modal
+      .modal-content
+        p 本当に削除しますか？
+        p.red-text ※元に戻せません
+      .modal-footer
+        = simple_form_for(@presentation, url: manage_presentation_path(@presentation), method: :delete) do |f|
+          = f.button :submit, value: "削除する", class: "red"

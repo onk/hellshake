@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   root "presentations#index"
 
   namespace :manage do
-    resources :presentations, only: [:index, :create, :edit, :update]
+    resources :presentations, only: [:index, :create, :edit, :update, :destroy]
   end
   resources :tags, only: [:show], param: :name
   get "presentations/search"

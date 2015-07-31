@@ -31,6 +31,12 @@ module Manage
       render :edit
     end
 
+    def destroy
+      @presentation = current_user.presentations.lock.find(params[:id])
+      @presentation.destroy
+      redirect_to manage_presentations_path
+    end
+
     private
 
       def create_presentation_params
