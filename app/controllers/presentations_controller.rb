@@ -11,6 +11,7 @@ class PresentationsController < ApplicationController
   def show
     @user = User.find_by!(username: params[:username])
     @presentation = @user.presentations.is_public.find_by(slug: params[:slug])
+    @presentation.access_count.increment
     render layout: nil
   end
 

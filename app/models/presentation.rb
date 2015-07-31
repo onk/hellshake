@@ -27,6 +27,9 @@ class Presentation < ActiveRecord::Base
   mount_uploader :pdf_file, PdfUploader
   mount_uploader :image_file, ImageUploader
 
+  include Redis::Objects
+  counter :access_count
+
   belongs_to :user
   has_one :presentation_outline, dependent: :destroy
 
