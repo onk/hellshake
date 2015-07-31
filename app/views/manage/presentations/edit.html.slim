@@ -21,5 +21,4 @@
         p 本当に削除しますか？
         p.red-text ※元に戻せません
       .modal-footer
-        = simple_form_for(@presentation, url: manage_presentation_path(@presentation), method: :delete) do |f|
-          = f.button :submit, value: "削除する", class: "red"
+        = link_to("削除する", manage_presentation_path(@presentation), class: "btn red", method: :delete)
