@@ -28,6 +28,7 @@ class Presentation < ActiveRecord::Base
   mount_uploader :image_file, ImageUploader
 
   include Redis::Objects
+  include RedisObjectsDestroyable
   counter :access_count
 
   belongs_to :user
