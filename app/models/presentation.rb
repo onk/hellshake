@@ -27,7 +27,16 @@ class Presentation < ActiveRecord::Base
   mount_uploader :pdf_file, PdfUploader
   mount_uploader :image_file, ImageUploader
 
+  # redis-objects override AR lock method
+  class << self
+    alias_method :ar_lock, :lock
+  end
   include Redis::Objects
+  class << self
+    alias_method :redis_lock, :lock
+    alias_method :lock, :ar_lock
+    remove_method :ar_lock
+  end
   include RedisObjectsDestroyable
   counter :access_count
 
