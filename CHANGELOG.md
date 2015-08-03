@@ -1,5 +1,16 @@
 ## master (unreleased)
-[full changelog](https://github.com/onk/sharedoc/compare/v0.5.3...master)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.6.1...master)
+
+## v0.6.1 (2015-08-03)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.6.0...v0.6.1)
+
+*   タグ検索時に is_public フラグが効いていなかった
+
+## v0.6.0 (2015-08-03)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.5.3...v0.6.0)
+
+*   プレゼンを削除できる機能を追加
+*   アクセス数を取得しておく (まだユーザには見せない)
 
 ## v0.5.3 (2015-07-31)
 [full changelog](https://github.com/onk/sharedoc/compare/v0.5.2...v0.5.3)
