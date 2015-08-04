@@ -1,5 +1,10 @@
 ## master (unreleased)
-[full changelog](https://github.com/onk/sharedoc/compare/v0.6.1...master)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.7.0...master)
+
+## v0.7.0 (2015-08-05)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.6.1...v0.7.0)
+
+*   outline だけじゃなく tag や title でも検索できるように
 
 ## v0.6.1 (2015-08-03)
 [full changelog](https://github.com/onk/sharedoc/compare/v0.6.0...v0.6.1)
