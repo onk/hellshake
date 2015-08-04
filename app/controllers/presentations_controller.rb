@@ -16,8 +16,11 @@ class PresentationsController < ApplicationController
   end
 
   def search
-    search_param = { query: { match: { body: { query: params[:q], operator: "and" } } } }
-    presentation_ids = PresentationOutline.search(search_param).map(&:presentation_id)
+    search_param = { query: { bool: { must: [
+      { multi_match: { minimum_should_match: "100%", query: params[:q], fields: %w(tags title outline) } }
+    ] } } }
+    presentation_ids = Presentation.search(search_param).map { |r| r.id.to_i }
+
     # TODO: id の時点で paginate できるはずなので ordered_find_by_id にかける前に処理したい
     @presentations = Presentation.is_public.ordered_find_by_id(presentation_ids).compact.paginate(page: params[:page])
     render "index"
