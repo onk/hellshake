@@ -1,5 +1,10 @@
 ## master (unreleased)
-[full changelog](https://github.com/onk/sharedoc/compare/v0.7.0...master)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.7.1...master)
+
+## v0.7.1 (2015-08-08)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.7.0...v0.7.1)
+
+*   検索結果のページネートを実装
 
 ## v0.7.0 (2015-08-05)
 [full changelog](https://github.com/onk/sharedoc/compare/v0.6.1...v0.7.0)
