@@ -19,7 +19,7 @@ class PresentationsController < ApplicationController
     search_param = { query: { bool: { must: [
       { multi_match: { minimum_should_match: "100%", query: params[:q], fields: %w(tags title outline) } }
     ] } } }
-    @presentations = Presentation.search(search_param).records.paginate(page: params[:page])
+    @presentations = Presentation.search(search_param).page(params[:page]).records
     render "index"
   end
 end
