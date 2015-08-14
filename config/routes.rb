@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   end
   resources :tags, only: [:show], param: :name
   get "presentations/search"
+  get "presentations" => "presentations#index", as: :presentations, format: "atom"
   scope "/:username" do
     get "/" => "users#show", as: :user
     get "/:slug" => "presentations#show", as: :presentation

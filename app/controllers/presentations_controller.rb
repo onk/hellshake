@@ -1,11 +1,16 @@
 class PresentationsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, if: :format_is_not_atom
 
   def index
     @presentations = Presentation.preload(:user).
                      is_public.
                      published_at_desc.
                      paginate(page: params[:page])
+
+    respond_to do |format|
+      format.html
+      format.atom
+    end
   end
 
   def show
@@ -22,4 +27,10 @@ class PresentationsController < ApplicationController
     @presentations = Presentation.search(search_param).page(params[:page]).records
     render "index"
   end
+
+  private
+
+    def format_is_not_atom
+      params[:format] != "atom"
+    end
 end
