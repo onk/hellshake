@@ -1,5 +1,10 @@
 ## master (unreleased)
-[full changelog](https://github.com/onk/sharedoc/compare/v0.7.1...master)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.7.2...master)
+
+## v0.7.2 (2015-08-14)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.7.1...v0.7.2)
+
+*   atom 配信
 
 ## v0.7.1 (2015-08-08)
 [full changelog](https://github.com/onk/sharedoc/compare/v0.7.0...v0.7.1)
