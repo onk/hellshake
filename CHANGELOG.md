@@ -1,5 +1,11 @@
 ## master (unreleased)
-[full changelog](https://github.com/onk/sharedoc/compare/v0.7.2...master)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.7.3...master)
+
+## v0.7.3 (2015-09-29)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.7.2...v0.7.3)
+
+*   atom 配信の不具合修正
+*   gem もろもろ最新化
 
 ## v0.7.2 (2015-08-14)
 [full changelog](https://github.com/onk/sharedoc/compare/v0.7.1...v0.7.2)
