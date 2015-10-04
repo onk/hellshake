@@ -6,6 +6,7 @@
 #  name                :string(255)
 #  username            :string(255)      not null
 #  remember_created_at :datetime
+#  accessed_at         :datetime
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
 #
