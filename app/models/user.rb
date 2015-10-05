@@ -32,4 +32,8 @@ class User < ActiveRecord::Base
   def image_url
     user_accounts.first.image_url
   end
+
+  def accessed_at_expired?
+    accessed_at < Time.current - 1.minute
+  end
 end
