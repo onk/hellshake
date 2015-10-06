@@ -56,4 +56,15 @@ class Presentation < ActiveRecord::Base
   def owner?(user)
     user_id == user.try!(:id)
   end
+
+  def reupload(file)
+    self.original_file.remove!
+    self.pdf_file.remove!
+    self.image_file.remove!
+    self.presentation_outline.destroy
+
+    self.original_file = file
+    self.save!
+    Ppt2pdfJob.perform_later(self)
+  end
 end

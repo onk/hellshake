@@ -21,10 +21,15 @@ module Manage
 
     def update
       @presentation = current_user.presentations.lock.find(params[:id])
-      if @presentation.update(update_presentation_params)
-        redirect_to manage_presentations_path
+      if params[:presentation][:original_file]
+        @presentation.reupload(params[:presentation][:original_file])
+        redirect_to edit_manage_presentation_path(@presentation)
       else
-        render :edit
+        if @presentation.update(update_presentation_params)
+          redirect_to manage_presentations_path
+        else
+          render :edit
+        end
       end
     rescue ActiveRecord::RecordNotUnique # uniqueness validation は mysql に任せる
       @presentation.errors.add(:slug, I18n.t("errors.messages.taken"))

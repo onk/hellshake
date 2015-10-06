@@ -15,6 +15,9 @@
             | 削除
     .col.l6
       = presentation_image_tag(@presentation)
+      = simple_form_for(@presentation, url: manage_presentation_path(@presentation)) do |f|
+        = f.input :original_file
+        = f.button :submit, "上げ直す"
 
     #delete_form.modal
       .modal-content
