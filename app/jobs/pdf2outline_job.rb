@@ -6,6 +6,10 @@ class Pdf2outlineJob < ActiveJob::Base
 
     # pdf -> txt に xpdf を使う
     text = `pdftotext -nopgbrk #{pdf_file_path} -`
-    presentation.create_presentation_outline(body: text)
+    presentation.with_lock do
+      outline = presentation.presentation_outline || presentation.build_presentation_outline
+      outline.body = text
+      outline.save!
+    end
   end
 end
