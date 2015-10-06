@@ -1,5 +1,12 @@
 ## master (unreleased)
-[full changelog](https://github.com/onk/sharedoc/compare/v0.7.3...master)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.8.0...master)
+
+## v0.8.0 (2015-10-07)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.7.3...v0.8.0)
+
+*   ユーザの accessed_at を記録する
+*   Pdf2outlineJob を再実行可能に
+*   資料を URL を保ったまま再アップロードできるように
 
 ## v0.7.3 (2015-09-29)
 [full changelog](https://github.com/onk/sharedoc/compare/v0.7.2...v0.7.3)
