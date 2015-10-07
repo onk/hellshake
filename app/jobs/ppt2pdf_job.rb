@@ -7,7 +7,7 @@ class Ppt2pdfJob < ActiveJob::Base
     pdf_file_uploader = presentation.pdf_file
     pdf_file_path = File.join(pdf_file_uploader.root, pdf_file_uploader.store_dir, pdf_file_name)
 
-    Dir.mktmpdir { |dir|
+    Dir.mktmpdir do |dir|
       ext = File.extname(original_file_path)
       case ext
       when ".ppt", ".pptx"
@@ -23,7 +23,7 @@ class Ppt2pdfJob < ActiveJob::Base
 
       Pdf2outlineJob.perform_later(presentation)
       Pdf2pngJob.perform_later(presentation)
-    }
+    end
   end
 
   def soffice_path

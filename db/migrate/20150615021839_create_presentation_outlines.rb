@@ -2,7 +2,7 @@ class CreatePresentationOutlines < ActiveRecord::Migration
   def change
     create_table :presentation_outlines do |t|
       t.integer :presentation_id, null: false
-      t.text    :body,                         limit: 16.megabyte - 1 # mediumtext
+      t.text    :body, limit: 16.megabyte - 1 # mediumtext
 
       t.timestamps null: false
     end
