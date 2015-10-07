@@ -1,5 +1,5 @@
 # target_version:
-#   rubocop v0.31.0
+#   rubocop v0.34.2
 
 # 自動生成されるものはチェック対象から除外する
 AllCops:
@@ -19,9 +19,10 @@ Style/AndOr:
 Style/AsciiComments:
   Enabled: false
 
-# do .. end から更にメソッドチェーンすると見づらいので許容する
+# do .. end から更にメソッドチェーンすると見づらいので
+# auto-correct せず、自分で修正する
 Style/BlockDelimiters:
-  Enabled: false
+  AutoCorrect: false
 
 # option 等、明示的にハッシュにした方が分かりやすい場合もある
 Style/BracesAroundHashParameters:
@@ -104,6 +105,11 @@ Style/Lambda:
 # 1_000_000 と区切り文字が 2 個以上必要になる場合のみ _ 区切りを必須にする
 Style/NumericLiterals:
   MinDigits: 7
+
+# 正規表現にマッチさせた時の特殊変数の置き換えは Regex.last_match ではなく
+# 名前付きキャプチャを使って参照したいので auto-correct しない
+Style/PerlBackrefs:
+  AutoCorrect: false
 
 # is_, has_, have_ から始まるメソッドを許可する
 Style/PredicateName:
