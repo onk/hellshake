@@ -11,15 +11,9 @@ class Ppt2pdfJob < ActiveJob::Base
       ext = File.extname(original_file_path)
       case ext
       when ".ppt", ".pptx"
-        # ppt, pptx -> pdf に libreoffice を使う
-        `#{soffice_path} --headless --convert-to pdf --outdir #{dir} #{original_file_path}`
-        pdf_file = Dir.glob("#{dir}/*.pdf").first
-        FileUtils.mkdir_p(File.dirname(pdf_file_path))
-        FileUtils.mv(pdf_file, pdf_file_path)
+        ppt_to_pdf(dir, original_file_path, pdf_file_path)
       when ".pdf"
-        # pdf -> pdf は libreoffice で変換できないのでそのまま使う
-        FileUtils.mkdir_p(File.dirname(pdf_file_path))
-        FileUtils.cp(original_file_path, pdf_file_path)
+        pdf_to_pdf(dir, original_file_path, pdf_file_path)
       else
         raise "unknown file type: #{ext}"
       end
@@ -48,5 +42,19 @@ class Ppt2pdfJob < ActiveJob::Base
     else
       path
     end
+  end
+
+  def ppt_to_pdf(dir, original_file_path, pdf_file_path)
+    # ppt, pptx -> pdf に libreoffice を使う
+    `#{soffice_path} --headless --convert-to pdf --outdir #{dir} #{original_file_path}`
+    pdf_file = Dir.glob("#{dir}/*.pdf").first
+    FileUtils.mkdir_p(File.dirname(pdf_file_path))
+    FileUtils.mv(pdf_file, pdf_file_path)
+  end
+
+  def pdf_to_pdf(dir, original_file_path, odf_file_path)
+    # pdf -> pdf は 変換する必要がないのでそのまま使う
+    FileUtils.mkdir_p(File.dirname(pdf_file_path))
+    FileUtils.cp(original_file_path, pdf_file_path)
   end
 end
