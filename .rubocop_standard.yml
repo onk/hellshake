@@ -78,10 +78,8 @@ Style/FormatString:
 Style/GuardClause:
   MinBodyLength: 5
 
-# 同じ hash 内で記法を混ぜない
 # rake タスクの順序の hash は rocket を許可する
 Style/HashSyntax:
-  EnforcedStyle: ruby19_no_mixed_keys
   Exclude:
     - "**/*.rake"
     - "Rakefile"
