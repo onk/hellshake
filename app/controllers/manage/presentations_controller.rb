@@ -53,7 +53,7 @@ module Manage
         if current_user.presentations.where(slug: slug).exists?
           # slug が重複していた場合は現在時刻を付与して重複回避。
           # これで重複したら諦めてエラー
-          slug = slug + Time.current.strftime("%Y%m%d%H%M%S")
+          slug += Time.current.strftime("%Y%m%d%H%M%S")
         end
         params[:presentation][:slug] = slug
         params.require(:presentation).permit(:title, :original_file, :published_at, :slug)

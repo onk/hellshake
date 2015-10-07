@@ -40,7 +40,7 @@ module Presentation::SearchModule
         username: user.username,
         title: title,
         outline: presentation_outline.try(:body),
-        tags: tag_list
+        tags: tag_list,
       }
     else
       {}

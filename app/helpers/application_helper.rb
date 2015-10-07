@@ -17,7 +17,7 @@ module ApplicationHelper
   def mdi_icon(names, options = {})
     names = names.is_a?(Array) ? names : names.to_s.split(/\s+/)
     classes = ["mdi"]
-    classes.concat names.map {|name| "mdi-#{name}" }
+    classes.concat names.map { |name| "mdi-#{name}" }
     classes.concat Array(options.delete(:class))
     content_tag(:i, nil, options.merge(class: classes))
   end

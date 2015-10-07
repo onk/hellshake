@@ -12,4 +12,3 @@ class ImageUploader < CarrierWave::Uploader::Base
     %w(png)
   end
 end
-
