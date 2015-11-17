@@ -1,5 +1,11 @@
 ## master (unreleased)
-[full changelog](https://github.com/onk/sharedoc/compare/v0.8.0...master)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.8.1...master)
+
+## v0.8.1 (2015-11-18)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.8.0...v0.8.1)
+
+*   ログインフォーム改善
+*   ログイン状態を維持するように
 
 ## v0.8.0 (2015-10-07)
 [full changelog](https://github.com/onk/sharedoc/compare/v0.7.3...v0.8.0)
