@@ -5,6 +5,7 @@
 #  id                  :integer          not null, primary key
 #  name                :string(255)
 #  username            :string(255)      not null
+#  remember_token      :string(255)
 #  remember_created_at :datetime
 #  accessed_at         :datetime
 #  created_at          :datetime         not null
@@ -16,7 +17,7 @@
 #
 
 class User < ActiveRecord::Base
-  devise :registerable, :omniauthable
+  devise :registerable, :omniauthable, :rememberable
 
   # 英数と - _ の 2 つの半角記号を 3-32 文字
   # ただし最初の文字はアルファベット、最後の文字はアルファベットまたは数字であること

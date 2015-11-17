@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151004221853) do
+ActiveRecord::Schema.define(version: 20151117181318) do
 
   create_table "presentation_outlines", force: :cascade do |t|
     t.integer  "presentation_id", limit: 4,        null: false
@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 20151004221853) do
   create_table "users", force: :cascade do |t|
     t.string   "name",                limit: 255
     t.string   "username",            limit: 255, null: false
+    t.string   "remember_token",      limit: 255
     t.datetime "remember_created_at"
     t.datetime "accessed_at"
     t.datetime "created_at",                      null: false
