@@ -1,5 +1,10 @@
 ## master (unreleased)
-[full changelog](https://github.com/onk/sharedoc/compare/v0.8.1...master)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.8.2...master)
+
+## v0.8.2 (2015-11-20)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.8.1...v0.8.2)
+
+*   pdf をアップロードしたときにエラーになる不具合修正
 
 ## v0.8.1 (2015-11-18)
 [full changelog](https://github.com/onk/sharedoc/compare/v0.8.0...v0.8.1)
