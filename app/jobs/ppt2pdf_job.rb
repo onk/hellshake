@@ -52,7 +52,7 @@ class Ppt2pdfJob < ActiveJob::Base
     FileUtils.mv(pdf_file, pdf_file_path)
   end
 
-  def pdf_to_pdf(dir, original_file_path, odf_file_path)
+  def pdf_to_pdf(dir, original_file_path, pdf_file_path)
     # pdf -> pdf は 変換する必要がないのでそのまま使う
     FileUtils.mkdir_p(File.dirname(pdf_file_path))
     FileUtils.cp(original_file_path, pdf_file_path)
