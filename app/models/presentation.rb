@@ -29,6 +29,8 @@ class Presentation < ActiveRecord::Base
   mount_uploader :pdf_file, PdfUploader
   mount_uploader :image_file, ImageUploader
 
+  before_validation :generate_slug
+
   # redis-objects override AR lock method
   class << self
     alias_method :ar_lock, :lock
@@ -67,4 +69,17 @@ class Presentation < ActiveRecord::Base
     self.save!
     Ppt2pdfJob.perform_later(self)
   end
+
+  private
+
+    def generate_slug
+      return if slug # generate only once
+
+      self.slug = Zipang.to_slug(title)
+      if user.presentations.where(slug: self.slug).exists?
+        # slug が重複していた場合は現在時刻を付与して重複回避。
+        # これで重複したら諦めてエラー
+        self.slug += Time.current.strftime("%Y%m%d%H%M%S")
+      end
+    end
 end

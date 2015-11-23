@@ -49,14 +49,7 @@ module Manage
         title = File.basename(params[:presentation][:original_file].original_filename, ".*")
         params[:presentation][:title] = title
         params[:presentation][:published_at] = Time.current
-        slug = Zipang.to_slug(title)
-        if current_user.presentations.where(slug: slug).exists?
-          # slug が重複していた場合は現在時刻を付与して重複回避。
-          # これで重複したら諦めてエラー
-          slug += Time.current.strftime("%Y%m%d%H%M%S")
-        end
-        params[:presentation][:slug] = slug
-        params.require(:presentation).permit(:title, :original_file, :published_at, :slug)
+        params.require(:presentation).permit(:title, :original_file, :published_at)
       end
 
       def update_presentation_params
