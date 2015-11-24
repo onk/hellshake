@@ -35,6 +35,6 @@ class User < ActiveRecord::Base
   end
 
   def accessed_at_expired?
-    accessed_at < Time.current - 1.minute
+    !accessed_at || accessed_at < Time.current - 1.minute
   end
 end
