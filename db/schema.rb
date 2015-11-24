@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 20150608023858) do
     t.datetime "updated_at",                   null: false
   end
 
-  add_index "user_accounts", ["provider", "uid"], name: "index_user_accounts_on_provider_and_uid", unique: true, using: :btree
-  add_index "user_accounts", ["user_id", "provider"], name: "index_user_accounts_on_user_id_and_provider", unique: true, using: :btree
+  add_index "user_accounts", ["provider", "uid"], name: "provider_and_uid", unique: true, using: :btree
+  add_index "user_accounts", ["user_id", "provider"], name: "user_id_and_provider", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name",                limit: 255

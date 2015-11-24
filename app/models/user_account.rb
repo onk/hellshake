@@ -14,8 +14,8 @@
 #
 # Indexes
 #
-#  index_user_accounts_on_provider_and_uid      (provider,uid) UNIQUE
-#  index_user_accounts_on_user_id_and_provider  (user_id,provider) UNIQUE
+#  provider_and_uid      (provider,uid) UNIQUE
+#  user_id_and_provider  (user_id,provider) UNIQUE
 #
 
 class UserAccount < ActiveRecord::Base
