@@ -1,6 +1,16 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id                  :integer          not null, primary key
+#  name                :string(255)
+#  remember_created_at :datetime
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#
+
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+  devise :omniauthable
+
+  has_many :user_accounts, dependent: :destroy
 end

@@ -1,0 +1,13 @@
+default:
+  facebook:
+    key: <%= ENV["FACEBOOK_APP_ID"] %>
+    secret: <%= ENV["FACEBOOK_SECRET_KEY"] %>
+  twitter:
+    key: <%= ENV["TWITTER_CONSUMER_KEY"] %>
+    secret: <%= ENV["TWITTER_CONSUMER_SECRET"] %>
+
+development:
+
+test:
+
+production:
