@@ -4,6 +4,7 @@ gem "rails", "4.2.1"
 
 gem "bower-rails"
 gem "coffee-rails"
+gem "dalli"
 gem "devise"
 gem "global"
 gem "gravtastic"
