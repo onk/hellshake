@@ -1,0 +1,5 @@
+ja:
+  errors:
+    messages:
+      username_regex: は3〜32文字で、英数および -(ハイフン) _(アンダースコア) のみで入力してください
+      reserved_username: はすでに存在します。

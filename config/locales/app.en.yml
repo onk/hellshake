@@ -1,0 +1,4 @@
+en:
+  errors:
+    messages:
+      username_regex: "3-32 characters only use numbers, alphabets, '-' and '_'."
