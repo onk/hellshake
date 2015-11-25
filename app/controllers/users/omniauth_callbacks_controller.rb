@@ -12,8 +12,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       account = UserAccount.find_or_initialize_by(provider: auth.provider, uid: auth.uid)
       unless account.user
         # 紐付きユーザが存在しない＝新規登録の場合
-        user = User.create(name: auth.extra.raw_info.name)
-        account.user_id = user.id
+        session[:omniauth] = auth
+        redirect_to new_user_registration_url and return
       end
       account.save_auth_info(auth)
       sign_in_and_redirect(account.user, event: :authentication)

@@ -21,11 +21,15 @@
 class UserAccount < ActiveRecord::Base
   belongs_to :user
 
-  def save_auth_info(omniauth)
+  def build_auth_info(omniauth)
     self.token = omniauth["credentials"]["token"]
     if omniauth["credentials"]["expires_at"]
       self.token_expires_at = Time.at(omniauth["credentials"]["expires_at"])
     end
+  end
+
+  def save_auth_info(omniauth)
+    build_auth_info(omniauth)
     self.save!
   end
 end
