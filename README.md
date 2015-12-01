@@ -1,7 +1,7 @@
 ShareDoc
 ================================
 
-clone of slideshade.net
+clone of slideshare.net
 
 System dependencies
 --------------------------------
