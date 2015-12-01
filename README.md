@@ -62,4 +62,4 @@ $ bundle exec sidekiq -v
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+The application is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
