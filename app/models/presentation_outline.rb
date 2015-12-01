@@ -15,4 +15,12 @@
 
 class PresentationOutline < ActiveRecord::Base
   belongs_to :presentation
+
+  after_save :update_presentation_document
+
+  private
+
+    def update_presentation_document
+      presentation.__elasticsearch__.index_document
+    end
 end

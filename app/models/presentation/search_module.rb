@@ -3,7 +3,12 @@ module Presentation::SearchModule
 
   included do
     include Elasticsearch::Model
-    include Elasticsearch::Model::Callbacks
+
+    # update_document は changed_attributes に依存していて罠が多いので
+    # Elasticsearch::Model::Callbacks を include せずに index_document を呼ぶ
+    after_commit -> { __elasticsearch__.index_document },  on: :create
+    after_commit -> { __elasticsearch__.index_document },  on: :update
+    after_commit -> { __elasticsearch__.delete_document }, on: :destroy
 
     settings index: {
       analysis: {
