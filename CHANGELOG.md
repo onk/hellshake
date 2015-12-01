@@ -1,5 +1,13 @@
 ## master (unreleased)
-[full changelog](https://github.com/onk/sharedoc/compare/v0.8.2...master)
+[full changelog](https://github.com/onk/sharedoc/compare/v1.0.0...master)
+
+## v1.0.0 (2015-12-01)
+[full changelog](https://github.com/onk/sharedoc/compare/v0.8.2...v1.0.0)
+
+*   accessed_at が空のユーザがログイン状態を維持していたときにログインできなくなる不具合修正
+*   bump to rails 4.2.5
+*   スライド概要更新時に elasticsearch に index されない不具合修正
+*   スライドにアクセス数を表示
 
 ## v0.8.2 (2015-11-20)
 [full changelog](https://github.com/onk/sharedoc/compare/v0.8.1...v0.8.2)
