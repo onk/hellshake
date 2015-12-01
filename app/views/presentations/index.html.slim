@@ -26,6 +26,9 @@
           - presentation.tag_list.each do |tag|
             = link_to(tag, tag_path(name: tag), class: "tag")
       .owner
+        .page_view
+          = mdi_icon("action-visibility", class: "margin--r5")
+          = presentation.access_count.to_i
         = name_with_avatar(presentation.user)
       - if presentation.owner?(current_user)
         .card-action.right-align
