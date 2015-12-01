@@ -3,14 +3,10 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  def current_user
-    @current_user ||= begin
-      user = super
-      if user && user.accessed_at_expired?
-        user.touch(:accessed_at)
-      end
-      user
-    end
+  before_action :update_accessed_at
+
+  def update_accessed_at
+    current_user.try(:touch, :accessed_at)
   end
 
   # for devise
