@@ -6,14 +6,13 @@ clone of slideshade.net
 System dependencies
 --------------------------------
 
-* ruby v2.2.x
+* ruby v2.0 以上
     * bundler
-* mysql v5.x
-* memcached v1.4
-* redis v3.x
-* elasticsearch v1.x
-    * kuromoji analysis plugin
-* nodejs 0.10.x
+* mysql v5.x 以上
+* memcached v1.4 以上
+* redis v2.8 以上
+* elasticsearch v1.x with kuromoji plugin もしくは v2.x 以上
+* nodejs 0.10.x 以上
     * npm
 * mecab
 

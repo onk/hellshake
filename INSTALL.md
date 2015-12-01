@@ -6,7 +6,7 @@ mac での環境構築方法 (だいたい homebrew で入る)
 ruby
 --------------------------------
 
-2.2.2 or later 推奨
+2.2.3 or later 推奨
 
 ```sh
 $ brew install ruby
@@ -31,7 +31,7 @@ $ brew install memcached
 redis
 --------------------------------
 
-KVS。sidekiq (非同期処理) の queue 用にのみ使っている
+KVS。sidekiq (非同期処理) の queue と、アクセスカウンタに使っている。
 
 ```sh
 $ brew install redis
@@ -46,19 +46,10 @@ elasticsearch
 $ brew install elasticsearch
 ```
 
-kuromoji analysis plugin。日本語の形態素解析
-
-```sh
-$ plugin -install elasticsearch/elasticsearch-analysis-kuromoji/2.6.0
-```
-
-バージョン部分は [README](https://github.com/elastic/elasticsearch-analysis-kuromoji) 参照
-
-
 nodejs
 --------------------------------
 
-js 周りに bower を使っている
+js/css 周りに bower を使っている
 
 ```sh
 $ brew install nodejs
