@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20151117181318) do
     t.integer  "user_id",       limit: 4,                   null: false
     t.string   "title",         limit: 255,                 null: false
     t.string   "slug",          limit: 255,                 null: false
-    t.boolean  "is_public",     limit: 1,   default: false, null: false
+    t.boolean  "is_public",                 default: false, null: false
     t.string   "original_file", limit: 255
     t.string   "pdf_file",      limit: 255
     t.string   "image_file",    limit: 255
