@@ -4,7 +4,12 @@ nav.white
     ul.right
       li
         = form_tag(presentations_search_path, method: "GET") do
-          = text_field_tag(:q, params[:q], placeholder: "Search", required: true)
+          .input-field
+            = search_field_tag(:q, params[:q], placeholder: "Search", required: true)
+            = label_tag(:search)
+              = mdi_icon("action-search")
+            = mdi_icon("navigation-close")
+
       - if current_user
         li
           = link_to(manage_presentations_path, class: "valign-wrapper")
