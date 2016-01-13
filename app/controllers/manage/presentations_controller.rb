@@ -47,6 +47,7 @@ module Manage
       def create_presentation_params
         # FIXIME: params 書き換えるのがイマイチ
         title = File.basename(params[:presentation][:original_file].original_filename, ".*")
+        title.encode!("UTF-8", "UTF-8-MAC")
         params[:presentation][:title] = title
         params[:presentation][:published_at] = Time.current
         params.require(:presentation).permit(:title, :original_file, :published_at)
