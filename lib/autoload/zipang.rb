@@ -7,7 +7,7 @@
 module Zipang
   # 半角空白、全角空白、アンスコを区切り文字とみなす
   GLUE_REGEX = /([[:space:]]|_)+/
-  GLUE = "-"
+  GLUE = "-".freeze
 
   def self.to_slug(str)
     word_arr = []
