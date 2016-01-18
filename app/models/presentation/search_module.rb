@@ -28,9 +28,9 @@ module Presentation::SearchModule
             tokenizer: "kuromoji_tokenizer",
             mode: "extended",
             filter: %w(kuromoji_baseform pos_filter greek_lowercase_filter cjk_width),
-          }
+          },
         },
-      }
+      },
     }
     mapping do
       indexes :title,   analyzer: :kuromoji_analyzer

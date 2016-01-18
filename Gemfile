@@ -33,6 +33,7 @@ gem "uglifier"
 group :development do
   gem "annotate"
   gem "byebug", group: :test
+  gem "onkcop"
   gem "pry"
   gem "pry-byebug"
   gem "pry-doc"
