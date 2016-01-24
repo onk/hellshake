@@ -1,8 +1,8 @@
 {
   "name": "dsl-generated dependencies",
   "dependencies": {
-    "jquery": "2.1.4",
-    "jquery-ujs": "1.0.3",
+    "jquery": "2.2.0",
+    "jquery-ujs": "1.2.0",
     "pdfjs-dist": "1.1.205",
     "masonry": "3.3.0",
     "jquery-ui": "1.11.4",
