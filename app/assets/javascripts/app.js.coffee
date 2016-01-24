@@ -6,7 +6,7 @@ $ ->
           itemSelector: ".grid-item",
           columnWidth: 250,
           gutter: 10,
-          isFitWidth: true
+          fitWidth: true
         }
       )
   $(".datepicker").pickadate(
