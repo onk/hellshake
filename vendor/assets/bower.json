@@ -4,7 +4,7 @@
     "jquery": "2.2.0",
     "jquery-ujs": "1.2.0",
     "pdfjs-dist": "1.1.205",
-    "masonry": "3.3.0",
+    "masonry": "4.0.0",
     "jquery-ui": "1.11.4",
     "jquery-tagit": "6ccd2de95e",
     "materialize": "0.97.0"
