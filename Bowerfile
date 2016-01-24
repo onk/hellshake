@@ -7,4 +7,4 @@ asset "masonry", "4.0.0"
 asset "jquery-ui", "1.11.4"
 asset "jquery-tagit", "6ccd2de95e"
 
-asset "materialize", "0.97.0"
+asset "materialize", "0.97.5"
