@@ -29,6 +29,7 @@ if Rails.env.development?
       exclude_helpers:         true,
       ignore_model_sub_dir:    false,
       ignore_columns:          nil,
+      ignore_routes:           nil,
       ignore_unknown_models:   false,
       hide_limit_column_types: "integer,boolean",
       skip_on_db_migrate:      false,
