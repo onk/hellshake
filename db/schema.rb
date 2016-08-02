@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151117181318) do
+ActiveRecord::Schema.define(version: 20160802060931) do
 
   create_table "presentation_outlines", force: :cascade do |t|
     t.integer  "presentation_id", limit: 4,        null: false
@@ -48,8 +48,15 @@ ActiveRecord::Schema.define(version: 20151117181318) do
     t.datetime "created_at"
   end
 
+  add_index "taggings", ["context"], name: "context", using: :btree
   add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
+  add_index "taggings", ["tag_id"], name: "tag_id", using: :btree
   add_index "taggings", ["taggable_id", "taggable_type", "context"], name: "taggable_id_and_taggable_type_and_context", using: :btree
+  add_index "taggings", ["taggable_id", "taggable_type", "tagger_id", "context"], name: "taggings_idy", using: :btree
+  add_index "taggings", ["taggable_id"], name: "taggable_id", using: :btree
+  add_index "taggings", ["taggable_type"], name: "taggable_type", using: :btree
+  add_index "taggings", ["tagger_id", "tagger_type"], name: "tagger_id_and_tagger_type", using: :btree
+  add_index "taggings", ["tagger_id"], name: "tagger_id", using: :btree
 
   create_table "tags", force: :cascade do |t|
     t.string  "name",           limit: 255
