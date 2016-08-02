@@ -310,7 +310,6 @@ DEPENDENCIES
   sass-rails
   sidekiq
   simple_form
-  sinatra
   slim-rails
   uglifier
   web-console

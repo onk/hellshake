@@ -26,7 +26,6 @@ gem "romaji"
 gem "sass-rails"
 gem "sidekiq"
 gem "simple_form"
-gem "sinatra", require: false
 gem "slim-rails"
 gem "uglifier"
 
