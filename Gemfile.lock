@@ -73,17 +73,17 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
-    elasticsearch (1.0.17)
-      elasticsearch-api (= 1.0.17)
-      elasticsearch-transport (= 1.0.17)
-    elasticsearch-api (1.0.17)
+    elasticsearch (1.1.0)
+      elasticsearch-api (= 1.1.0)
+      elasticsearch-transport (= 1.1.0)
+    elasticsearch-api (1.1.0)
       multi_json
     elasticsearch-model (0.1.9)
       activesupport (> 3)
       elasticsearch (> 0.4)
       hashie
     elasticsearch-rails (0.1.9)
-    elasticsearch-transport (1.0.17)
+    elasticsearch-transport (1.1.0)
       faraday
       multi_json
     erubis (2.7.0)
