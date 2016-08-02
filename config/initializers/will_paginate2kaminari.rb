@@ -20,5 +20,7 @@ module WillPaginate2Kaminari
   end
 end
 
-Kaminari::ActiveRecordModelExtension.include(WillPaginate2Kaminari::ActiveRecord)
+ActiveSupport.on_load(:active_record) do
+  Kaminari::ActiveRecordModelExtension.include(WillPaginate2Kaminari::ActiveRecord)
+end
 Array.include(WillPaginate2Kaminari::Array)

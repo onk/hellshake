@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "rails", "4.2.6"
+gem "rails", "4.2.7"
 
 gem "acts-as-taggable-on"
 gem "bower-rails"
@@ -26,7 +26,6 @@ gem "romaji"
 gem "sass-rails"
 gem "sidekiq"
 gem "simple_form"
-gem "sinatra", require: false
 gem "slim-rails"
 gem "uglifier"
 
