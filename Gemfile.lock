@@ -265,10 +265,6 @@ GEM
     unicode-display_width (1.1.0)
     warden (1.2.6)
       rack (>= 1.0)
-    web-console (3.3.0)
-      activemodel (>= 4.2)
-      debug_inspector
-      railties (>= 4.2)
     yard (0.9.5)
 
 PLATFORMS
@@ -312,7 +308,6 @@ DEPENDENCIES
   simple_form
   slim-rails
   uglifier
-  web-console
 
 BUNDLED WITH
    1.12.5
