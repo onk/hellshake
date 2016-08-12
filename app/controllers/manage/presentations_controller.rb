@@ -21,8 +21,8 @@ module Manage
 
     def update
       @presentation = current_user.presentations.lock.find(params[:id])
-      if params[:presentation][:original_file]
-        @presentation.reupload(params[:presentation][:original_file])
+      if (original_file = params[:presentation][:original_file])
+        @presentation.reupload(original_file)
         redirect_to edit_manage_presentation_path(@presentation)
       else
         if @presentation.update(update_presentation_params)
