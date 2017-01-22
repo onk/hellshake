@@ -49,12 +49,10 @@ GEM
     bower-rails (0.11.0)
     builder (3.2.3)
     byebug (9.0.6)
-    carrierwave (0.11.2)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
-      json (>= 1.7)
+    carrierwave (1.0.0)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
       mime-types (>= 1.16)
-      mimemagic (>= 0.3.0)
     coderay (1.1.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
@@ -113,7 +111,6 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    mimemagic (0.3.2)
     mini_magick (4.6.0)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
@@ -272,7 +269,7 @@ DEPENDENCIES
   annotate
   bower-rails
   byebug
-  carrierwave (< 1.0)
+  carrierwave
   coffee-rails
   dalli
   devise

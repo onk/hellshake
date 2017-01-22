@@ -4,7 +4,7 @@ gem "rails", "4.2.7"
 
 gem "acts-as-taggable-on"
 gem "bower-rails"
-gem "carrierwave", "< 1.0" # TODO
+gem "carrierwave"
 gem "coffee-rails"
 gem "dalli"
 gem "devise"
