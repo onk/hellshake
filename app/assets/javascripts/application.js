@@ -15,7 +15,7 @@
 //= require pdfjs-dist
 //= require pdfjs-dist/build/pdf.worker
 //= require ev-emitter
-//= require matches-selector
+//= require desandro-matches-selector
 //= require fizzy-ui-utils
 //= require get-size
 //= require outlayer/item
