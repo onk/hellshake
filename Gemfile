@@ -13,7 +13,7 @@ gem "elasticsearch-model"
 gem "elasticsearch-rails"
 gem "global"
 gem "jbuilder"
-gem "kaminari", "< 1.0" # TODO
+gem "kaminari"
 gem "mini_magick"
 gem "mysql2"
 gem "natto"
