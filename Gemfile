@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "rails", "4.2.7"
+gem "rails", "4.2.7.1"
 
 gem "acts-as-taggable-on"
 gem "bower-rails"
@@ -8,6 +8,7 @@ gem "carrierwave"
 gem "coffee-rails"
 gem "dalli"
 gem "devise"
+gem "elasticsearch", "< 2.0" # TODO
 gem "elasticsearch-model"
 gem "elasticsearch-rails"
 gem "global"
