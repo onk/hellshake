@@ -1,6 +1,6 @@
 $ ->
   # img の height を可変にしたいので
-  $(window).load ->
+  $(window).on "load", ->
     if $(".grid").length > 0
       new Masonry(".grid", {
           itemSelector: ".grid-item",
