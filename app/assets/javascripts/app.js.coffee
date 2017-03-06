@@ -18,4 +18,4 @@ $ ->
     clear: false
   )
   $(".tagit").tagit()
-  $('.modal-trigger').leanModal();
+  $('.modal').modal()
