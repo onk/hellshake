@@ -11,7 +11,7 @@
           = f.input :tag_list, input_html: { value: @presentation.tag_list.join(","), class: "tagit" }
         .form-actions.right-align
           = f.button :submit
-          .btn-floating.btn-large.red.modal-trigger[data-target="delete_form"]
+          .btn-floating.btn-large.red[data-target="delete_form"]
             | 削除
     .col.l6
       = presentation_image_tag(@presentation)

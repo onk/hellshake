@@ -171,7 +171,7 @@ module SimpleForm
     class DatepickerInput < StringInput
       def input(wrapper_options = nil)
         input_html_options[:type] = "date"
-        input_html_options[:value] = I18n.l(object[attribute_name], format: :date)
+        input_html_options[:value] = I18n.l(object[attribute_name], format: :date_iso8601)
         merged_input_options = merge_wrapper_options(input_html_options, wrapper_options)
         @builder.text_field(attribute_name, merged_input_options)
       end
