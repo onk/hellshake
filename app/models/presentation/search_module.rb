@@ -27,7 +27,7 @@ module Presentation::SearchModule
             type: "custom",
             tokenizer: "kuromoji_tokenizer",
             mode: "extended",
-            filter: %w(kuromoji_baseform pos_filter greek_lowercase_filter cjk_width),
+            filter: %w[kuromoji_baseform pos_filter greek_lowercase_filter cjk_width],
           },
         },
       },

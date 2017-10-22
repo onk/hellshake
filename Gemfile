@@ -8,7 +8,6 @@ gem "carrierwave"
 gem "coffee-rails"
 gem "dalli"
 gem "devise"
-gem "elasticsearch", "< 2.0" # TODO
 gem "elasticsearch-model"
 gem "elasticsearch-rails"
 gem "global"
