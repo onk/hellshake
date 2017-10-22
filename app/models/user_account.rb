@@ -7,6 +7,7 @@
 #  provider   :string(255)      not null
 #  uid        :string(255)      not null
 #  image_url  :string(255)
+#  raw_info   :text(65535)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -21,6 +22,7 @@ class UserAccount < ActiveRecord::Base
 
   def build_auth_info(omniauth)
     self.image_url = omniauth["info"]["image"]
+    self.raw_info  = omniauth["extra"]["raw_info"].to_json
   end
 
   def save_auth_info(omniauth)
