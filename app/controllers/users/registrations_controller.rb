@@ -14,7 +14,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     def build_resource(hash = nil)
       super
       auth = session[:omniauth]
-      @user.name = auth.extra.raw_info.name
+      @user.name = auth.info.name
       account = @user.user_accounts.find_or_initialize_by(provider: auth.provider, uid: auth.uid)
       account.build_auth_info(auth)
     end
