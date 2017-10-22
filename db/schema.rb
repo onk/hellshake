@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171022174931) do
+ActiveRecord::Schema.define(version: 20171022182219) do
 
   create_table "presentation_outlines", force: :cascade do |t|
     t.integer  "presentation_id", limit: 4,        null: false
@@ -66,15 +66,12 @@ ActiveRecord::Schema.define(version: 20171022174931) do
   add_index "tags", ["name"], name: "name", unique: true, using: :btree
 
   create_table "user_accounts", force: :cascade do |t|
-    t.integer  "user_id",          limit: 4,   null: false
-    t.string   "provider",         limit: 255, null: false
-    t.string   "uid",              limit: 255, null: false
-    t.string   "image_url",        limit: 255
-    t.string   "token",            limit: 511, null: false
-    t.string   "token_secret",     limit: 255
-    t.datetime "token_expires_at"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.integer  "user_id",    limit: 4,   null: false
+    t.string   "provider",   limit: 255, null: false
+    t.string   "uid",        limit: 255, null: false
+    t.string   "image_url",  limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   add_index "user_accounts", ["provider", "uid"], name: "provider_and_uid", unique: true, using: :btree
