@@ -1,6 +1,9 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
+  if Rails.env.development?
+    config.omniauth :developer, fields: [:name], uid_field: :name
+  end
   config.omniauth :facebook, Global.omniauth.facebook.key, Global.omniauth.facebook.secret
   config.omniauth :twitter,  Global.omniauth.twitter.key,  Global.omniauth.twitter.secret
 
