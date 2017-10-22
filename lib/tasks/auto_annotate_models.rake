@@ -40,7 +40,7 @@ if Rails.env.development?
       force:                   false,
       trace:                   false,
       wrapper_open:            nil,
-      wrapper_close:           nil
+      wrapper_close:           nil,
     )
   end
 
