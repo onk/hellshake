@@ -6,7 +6,7 @@
 #  user_id          :integer          not null
 #  provider         :string(255)      not null
 #  uid              :string(255)      not null
-#  image_url        :string(255)      not null
+#  image_url        :string(255)
 #  token            :string(511)      not null
 #  token_secret     :string(255)
 #  token_expires_at :datetime
