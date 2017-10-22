@@ -21,4 +21,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
   alias_method :facebook, :auth
   alias_method :twitter,  :auth
+
+  if Rails.env.development?
+    alias_method :developer, :auth
+    skip_before_action :verify_authenticity_token, only: [:developer]
+  end
 end
