@@ -31,7 +31,7 @@ class User < ActiveRecord::Base
   has_many :user_accounts, dependent: :destroy, autosave: true
 
   def image_url
-    user_accounts.first.image_url
+    user_accounts.first.image_url || ActionController::Base.helpers.image_path("default_user.png")
   end
 
   def accessed_at_expired?
