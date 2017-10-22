@@ -15,7 +15,7 @@ atom_feed(language: "ja-JP",
                updated:   presentation.updated_at) do |item|
       item.title(presentation.title)
       item.content("<pre>#{presentation.presentation_outline.try(:body)}</pre>", type: "text")
-      item.author{|author| author.name(presentation.user.name) }
+      item.author { |author| author.name(presentation.user.name) }
     end
   end
 end

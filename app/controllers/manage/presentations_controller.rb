@@ -4,8 +4,8 @@ module Manage
 
     def index
       @presentations = current_user.presentations.preload(:user).
-                       published_at_desc.
-                       paginate(page: params[:page])
+                         published_at_desc.
+                         paginate(page: params[:page])
       render "presentations/index"
     end
 

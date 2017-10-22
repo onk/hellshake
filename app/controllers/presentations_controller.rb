@@ -3,9 +3,9 @@ class PresentationsController < ApplicationController
 
   def index
     @presentations = Presentation.preload(:user).
-                     is_public.
-                     published_at_desc.
-                     paginate(page: params[:page])
+                       is_public.
+                       published_at_desc.
+                       paginate(page: params[:page])
 
     respond_to do |format|
       format.html
