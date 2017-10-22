@@ -6,17 +6,17 @@ clone of slideshare.net
 System dependencies
 --------------------------------
 
-* ruby v2.0 以上
+* ruby v2.4+
     * bundler
-* mysql v5.x 以上
-* memcached v1.4 以上
-* redis v2.8 以上
-* elasticsearch v1.x with kuromoji plugin もしくは v2.x 以上
-* nodejs 0.10.x 以上
+* mysql v5.7+
+* memcached v1.5+
+* redis v4.0+
+* elasticsearch v5.5+
+* nodejs 8.7+
     * npm
 * mecab
 
-* libreoffice (pdf のみアップロードするなら不要)
+* libreoffice (if you need to upload ppt/pptx)
 * poppler (pdftotext,pdftocario)
 
 [https://github.com/onk/sharedoc/blob/master/INSTALL.md](https://github.com/onk/sharedoc/blob/master/INSTALL.md)
@@ -24,7 +24,7 @@ System dependencies
 How to setup
 --------------------------------
 
-### インストール
+### Install
 
 ```sh
 $ git clone https://github.com/onk/sharedoc.git
@@ -34,15 +34,13 @@ $ npm install
 $ bundle exec rake bower:install
 ```
 
-### 環境毎の設定をする
-
-コピーし、必要に応じて変更する。
+### Configure database
 
 ```
 $ cp config/database.yml.sample config/database.yml
 ```
 
-### DB作成, 初期データ投入
+### Setup database
 
 ```
 $ bundle exec rake db:create
@@ -50,14 +48,14 @@ $ bundle exec rake db:migrate
 $ bundle exec rake db:seed
 ```
 
-### サーバ起動
+### Start servers
 
 ```
 $ bundle exec rails server
 $ bundle exec sidekiq -v
 ```
 
-[http://localhost:3000/](http://localhost:3000/) にアクセスする
+And access [http://localhost:3000/](http://localhost:3000/)
 
 
 ## License
