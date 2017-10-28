@@ -166,6 +166,22 @@ SimpleForm.setup do |config|
 
   # Defines which i18n scope will be used in Simple Form.
   # config.i18n_scope = 'simple_form'
+
+  # materialize-css does not work with checkbox wrapped in `.input-field`
+  # options are same as :default
+  config.wrappers :materialize_boolean, hint_class: :field_with_hint, error_class: :field_with_errors do |b|
+    b.use :html5
+    b.use :placeholder
+    b.optional :maxlength
+    b.optional :minlength
+    b.optional :pattern
+    b.optional :min_max
+    b.optional :readonly
+    b.use :label_input
+    b.use :hint,  wrap_with: { tag: :span, class: :hint }
+    b.use :error, wrap_with: { tag: :span, class: :error }
+  end
+  config.wrapper_mappings = { boolean: :materialize_boolean }
 end
 
 # datepicker 対応
