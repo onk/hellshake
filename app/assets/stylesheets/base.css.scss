@@ -77,3 +77,7 @@ ul.tagit li.tagit-choice a.tagit-close .text-icon:hover {
 [type="checkbox"] + label {
   margin: 0 0 15px 0;
 }
+
+nav .input-field input {
+  height: 64px; /* nav height */
+}

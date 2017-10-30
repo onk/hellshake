@@ -6,7 +6,7 @@ nav.white
         = form_tag(presentations_search_path, method: "GET") do
           .input-field
             = search_field_tag(:q, params[:q], placeholder: "Search", required: true)
-            = label_tag(:search)
+            = label_tag(:search, class: "label-icon")
               = mi("search")
             = mi("close")
 
