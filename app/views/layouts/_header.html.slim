@@ -7,8 +7,8 @@ nav.white
           .input-field
             = search_field_tag(:q, params[:q], placeholder: "Search", required: true)
             = label_tag(:search)
-              = mdi_icon("action-search")
-            = mdi_icon("navigation-close")
+              = mi("search")
+            = mi("close")
 
       - if current_user
         li

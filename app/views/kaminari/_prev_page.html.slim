@@ -6,4 +6,4 @@
     per_page     : number of items to fetch per page
     remote       : data-remote
 li
-  = link_to_unless current_page.first?, mdi_icon("navigation-chevron-left"), url, rel: 'prev', remote: remote
+  = link_to_unless current_page.first?, mi("chevron_left"), url, rel: 'prev', remote: remote
