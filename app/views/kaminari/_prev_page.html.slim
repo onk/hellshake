@@ -5,5 +5,9 @@
     total_pages  : total number of pages
     per_page     : number of items to fetch per page
     remote       : data-remote
-li
-  = link_to_unless current_page.first?, mdi_icon("navigation-chevron-left"), url, rel: 'prev', remote: remote
+- if current_page.first?
+  li.disabled
+    a = mi("chevron_left")
+- else
+  li.waves-effect
+    = link_to mi("chevron_left"), url, rel: 'prev', remote: remote

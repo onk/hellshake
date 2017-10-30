@@ -14,11 +14,9 @@ module ApplicationHelper
     end
   end
 
-  def mdi_icon(names, options = {})
-    names = names.is_a?(Array) ? names : names.to_s.split(/\s+/)
-    classes = ["mdi"]
-    classes.concat(names.map { |name| "mdi-#{name}" })
-    classes.concat(Array(options.delete(:class)))
-    content_tag(:i, nil, options.merge(class: classes))
+  def material_icon(name, options = {})
+    classes = Array(options.delete(:class)) + ["material-icons"]
+    content_tag(:i, name, options.merge(class: classes))
   end
+  alias_method :mi, :material_icon
 end

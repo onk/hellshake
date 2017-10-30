@@ -12,6 +12,7 @@
     "outlayer": "2.1.0",
     "ev-emitter": "1.0.3",
     "fizzy-ui-utils": "2.0.3",
-    "desandro-matches-selector": "2.0.2"
+    "desandro-matches-selector": "2.0.2",
+    "material-design-icons": "3.0.1"
   }
 }
