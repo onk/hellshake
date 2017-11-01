@@ -19,6 +19,7 @@ gem "natto"
 gem "omniauth"
 gem "omniauth-facebook"
 gem "omniauth-twitter"
+gem 'omniauth-google-oauth2'
 gem "redis-namespace"
 gem "redis-objects"
 gem "reserved_word"

@@ -21,6 +21,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
   alias_method :facebook, :auth
   alias_method :twitter,  :auth
+  alias_method :google,  :auth
 
   if Rails.env.development?
     alias_method :developer, :auth

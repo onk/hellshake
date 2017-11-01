@@ -5,6 +5,9 @@ default:
   twitter:
     key: <%= ENV["TWITTER_CONSUMER_KEY"] %>
     secret: <%= ENV["TWITTER_CONSUMER_SECRET"] %>
+  google:
+    key: <%= ENV["GOOGLE_APP_ID"] %>
+    secret: <%= ENV["GOOGLE_APP_SECRET"] %>
 
 development:
 
