@@ -2,8 +2,6 @@ class Pdf2pngJob < ActiveJob::Base
   queue_as :default
 
   def perform(presentation)
-    pdf_file_path = presentation.pdf_file.path
-
     Dir.mktmpdir do |dir|
       png_basename = File.basename(pdf_file_path = presentation.pdf_file.path, ".*")
       # pdf の 1 ページ目のみを png に変換
