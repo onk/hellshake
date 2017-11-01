@@ -6,6 +6,7 @@ Devise.setup do |config|
   end
   config.omniauth :facebook, Global.omniauth.facebook.key, Global.omniauth.facebook.secret
   config.omniauth :twitter,  Global.omniauth.twitter.key,  Global.omniauth.twitter.secret
+  config.omniauth :google_oauth2,  Global.omniauth.google.key,  Global.omniauth.google.secret, {prompt:"select_account",  hd: 'example.co.jp', name: :google}
 
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
