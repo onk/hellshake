@@ -5,14 +5,14 @@
     "jquery-ujs": "1.2.2",
     "pdfjs-dist": "1.1.205",
     "masonry": "4.1.1",
-    "jquery-ui": "1.12.1",
-    "jquery-tagit": "6ccd2de95e",
     "materialize": "0.98.0",
     "get-size": "2.0.2",
     "outlayer": "2.1.0",
     "ev-emitter": "1.0.3",
     "fizzy-ui-utils": "2.0.3",
     "desandro-matches-selector": "2.0.2",
-    "material-design-icons": "3.0.1"
+    "material-design-icons": "3.0.1",
+    "materialize-tags": "1.2.2",
+    "typeahead.js": "0.11.1"
   }
 }
