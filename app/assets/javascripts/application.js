@@ -22,6 +22,6 @@
 //= require outlayer
 //= require masonry
 //= require materialize
-//= require jquery-ui
-//= require jquery-tagit/js/tag-it
+//= require typeahead.js/dist/typeahead.bundle
+//= require materialize-tags/dist/js/materialize-tags
 //= require app
