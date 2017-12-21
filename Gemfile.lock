@@ -283,7 +283,7 @@ GEM
     unicode-display_width (1.3.0)
     warden (1.2.7)
       rack (>= 1.0)
-    yard (0.9.9)
+    yard (0.9.12)
 
 PLATFORMS
   ruby
