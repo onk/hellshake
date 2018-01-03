@@ -17,8 +17,6 @@
 
 # npm generated files
 /node_modules/
-# bower generated files
-/vendor/assets/bower_components/
 
 # Ignore uploaded files
 /public/uploads

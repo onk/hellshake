@@ -45,7 +45,6 @@ GEM
     bcrypt (3.1.11)
     binding_of_caller (0.7.3)
       debug_inspector (>= 0.0.1)
-    bower-rails (0.11.0)
     builder (3.2.3)
     byebug (9.1.0)
     carrierwave (1.2.1)
@@ -290,7 +289,6 @@ PLATFORMS
 DEPENDENCIES
   acts-as-taggable-on
   annotate
-  bower-rails
   byebug
   carrierwave
   coffee-rails

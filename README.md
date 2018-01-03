@@ -30,8 +30,7 @@ How to setup
 $ git clone https://github.com/onk/hellshake.git
 $ cd hellshake
 $ bundle install
-$ npm install
-$ bundle exec rake bower:install
+$ yarn install
 ```
 
 ### Configure database

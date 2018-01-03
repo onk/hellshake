@@ -49,10 +49,10 @@ $ brew install elasticsearch
 nodejs
 --------------------------------
 
-js/css 周りに bower を使っている
+js/css 周りに yarn を使っている
 
 ```sh
-$ brew install nodejs
+$ brew install yarn
 ```
 
 libreoffice

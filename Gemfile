@@ -3,7 +3,6 @@ source "https://rubygems.org"
 gem "rails", "4.2.8"
 
 gem "acts-as-taggable-on"
-gem "bower-rails"
 gem "carrierwave"
 gem "coffee-rails"
 gem "dalli"
