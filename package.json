@@ -1,8 +1,12 @@
 {
-  "engines": {
-    "node": "latest",
-    "npm": "latest"
-  },
   "dependencies": {
+    "jquery": "^3.2.1",
+    "jquery-ujs": "^1.2.2",
+    "pdfjs-dist": "1.3.233",
+    "masonry-layout": "^4.2.1",
+    "materialize-css": "0.98.0",
+    "material-design-icons": "^3.0.1",
+    "materialize-tags": "^1.2.0",
+    "typeahead.js": "^0.11.1"
   }
 }
