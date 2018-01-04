@@ -20,8 +20,8 @@
 //= require get-size
 //= require outlayer/item
 //= require outlayer
-//= require masonry
-//= require materialize
+//= require masonry-layout/masonry
+//= require materialize-css
 //= require typeahead.js/dist/typeahead.bundle
 //= require materialize-tags/dist/js/materialize-tags
 //= require app
