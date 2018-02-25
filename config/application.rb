@@ -15,7 +15,7 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Sharedoc
+module Hellshake
   class Application < Rails::Application
     Global.configure do |config|
       config.environment = Rails.env.to_s

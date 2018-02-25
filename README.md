@@ -1,4 +1,4 @@
-ShareDoc
+HellShake
 ================================
 
 clone of slideshare.net
@@ -19,7 +19,7 @@ System dependencies
 * libreoffice (if you need to upload ppt/pptx)
 * poppler (pdftotext,pdftocario)
 
-[https://github.com/onk/sharedoc/blob/master/INSTALL.md](https://github.com/onk/sharedoc/blob/master/INSTALL.md)
+[https://github.com/onk/hellshake/blob/master/INSTALL.md](https://github.com/onk/hellshake/blob/master/INSTALL.md)
 
 How to setup
 --------------------------------
@@ -27,8 +27,8 @@ How to setup
 ### Install
 
 ```sh
-$ git clone https://github.com/onk/sharedoc.git
-$ cd sharedoc
+$ git clone https://github.com/onk/hellshake.git
+$ cd hellshake
 $ bundle install
 $ npm install
 $ bundle exec rake bower:install
