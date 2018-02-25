@@ -2,10 +2,10 @@ atom_feed(language: "ja-JP",
           root_url: root_url,
           url:      request.original_url,
           id:       root_url) do |feed|
-  feed.title    "Sharedoc"
+  feed.title    "HellShake"
   feed.subtitle "プレゼンテーション一覧"
   feed.updated  Presentation.is_public.maximum(:updated_at)
-  feed.author   "Sharedoc"
+  feed.author   "HellShake"
 
   @presentations.each do |presentation|
     feed.entry(presentation,
