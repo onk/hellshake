@@ -1,5 +1,3 @@
-/* -*- Mode: Java; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 2 -*- */
-/* vim: set shiftwidth=2 tabstop=2 autoindent cindent expandtab: */
 /* Copyright 2015 Mozilla Foundation
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -156,7 +154,7 @@ var PDFLinkService = (function () {
           return pdfOpenParams;
         }
       }
-      return '';
+      return this.getAnchorUrl('');
     },
 
     /**
@@ -228,13 +226,11 @@ var PDFLinkService = (function () {
           this.page = pageNumber; // simple page
         }
         if ('pagemode' in params) {
-          if (params.pagemode === 'thumbs' || params.pagemode === 'bookmarks' ||
-              params.pagemode === 'attachments') {
-            this.switchSidebarView((params.pagemode === 'bookmarks' ?
-                                   'outline' : params.pagemode), true);
-          } else if (params.pagemode === 'none' && this.sidebarOpen) {
-            document.getElementById('sidebarToggle').click();
-          }
+          var event = document.createEvent('CustomEvent');
+          event.initCustomEvent('pagemode', true, true, {
+            mode: params.pagemode,
+          });
+          this.pdfViewer.container.dispatchEvent(event);
         }
       } else if (/^\d+$/.test(hash)) { // page number
         this.page = hash;

@@ -19,4 +19,6 @@
 //= require ./display/webgl
 //= require ./display/pattern_helper
 //= require ./display/font_loader
-//= require ./display/annotation_helper
+//= require ./display/dom_utils
+//= require ./display/annotation_layer
+//= require ./display/text_layer

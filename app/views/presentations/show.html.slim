@@ -4,6 +4,7 @@ html[dir="ltr" mozdisallowselectionprint moznomarginboxes]
     meta[charset="utf-8"]
     meta[name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"]
     meta[name="google" content="notranslate"]
+    meta[http-equiv="X-UA-Compatible" content="IE=edge"]
     title
       = @presentation.title
     = stylesheet_link_tag 'pdf.js/web/viewer'
@@ -53,6 +54,7 @@ html[dir="ltr" mozdisallowselectionprint moznomarginboxes]
           input#findMatchCase.toolbarField[type="checkbox" tabindex="95"]
           label.toolbarLabel[for="findMatchCase" data-l10n-id="find_match_case_label"]
             | Match case
+          span#findResultsCount.toolbarLabel.hidden
           span#findMsg.toolbarLabel
         #secondaryToolbar.secondaryToolbar.hidden.doorHangerRight
           #secondaryToolbarButtonContainer

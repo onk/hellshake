@@ -1,5 +1,3 @@
-/* -*- Mode: Java; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 2 -*- */
-/* vim: set shiftwidth=2 tabstop=2 autoindent cindent expandtab: */
 /* Copyright 2014 Mozilla Foundation
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -149,7 +147,7 @@ var createMeshCanvas = (function createMeshCanvasClosure() {
   }
 
   function createMeshCanvas(bounds, combinesScale, coords, colors, figures,
-                            backgroundColor) {
+                            backgroundColor, cachedCanvases) {
     // we will increase scale on some weird factor to let antialiasing take
     // care of "rough" edges
     var EXPECTED_SCALE = 1.1;
@@ -183,11 +181,11 @@ var createMeshCanvas = (function createMeshCanvasClosure() {
                                       figures, context);
 
       // https://bugzilla.mozilla.org/show_bug.cgi?id=972126
-      tmpCanvas = CachedCanvases.getCanvas('mesh', width, height, false);
+      tmpCanvas = cachedCanvases.getCanvas('mesh', width, height, false);
       tmpCanvas.context.drawImage(canvas, 0, 0);
       canvas = tmpCanvas.canvas;
     } else {
-      tmpCanvas = CachedCanvases.getCanvas('mesh', width, height, false);
+      tmpCanvas = cachedCanvases.getCanvas('mesh', width, height, false);
       var tmpCtx = tmpCanvas.context;
 
       var data = tmpCtx.createImageData(width, height);
@@ -243,7 +241,8 @@ ShadingIRs.Mesh = {
         // Rasterizing on the main thread since sending/queue large canvases
         // might cause OOM.
         var temporaryPatternCanvas = createMeshCanvas(bounds, scale, coords,
-          colors, figures, shadingFill ? null : background);
+          colors, figures, shadingFill ? null : background,
+          owner.cachedCanvases);
 
         if (!shadingFill) {
           ctx.setTransform.apply(ctx, owner.baseTransform);
@@ -346,7 +345,8 @@ var TilingPattern = (function TilingPatternClosure() {
       height = Math.min(Math.ceil(Math.abs(height * combinedScale[1])),
         MAX_PATTERN_SIZE);
 
-      var tmpCanvas = CachedCanvases.getCanvas('pattern', width, height, true);
+      var tmpCanvas = owner.cachedCanvases.getCanvas('pattern',
+        width, height, true);
       var tmpCtx = tmpCanvas.context;
       var graphics = new CanvasGraphics(tmpCtx, commonObjs, objs);
       graphics.groupLevel = owner.groupLevel;
