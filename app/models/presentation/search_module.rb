@@ -1,7 +1,7 @@
 module Presentation::SearchModule
   extend ActiveSupport::Concern
 
-  included do
+  included do # rubocop:disable Metrics/BlockLength ElasticSearch の index 定義なので無理
     include Elasticsearch::Model
 
     # update_document は changed_attributes に依存していて罠が多いので

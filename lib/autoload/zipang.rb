@@ -19,7 +19,7 @@ module Zipang
     end
 
     # 英数 -_ に合致しない文字列は取り除く
-    word_arr.map { |w| Romaji.kana2romaji(w) }.join(GLUE).gsub(/[^0-9A-Za-z\-_]/, "").squeeze(GLUE)
+    word_arr.map {|w| Romaji.kana2romaji(w) }.join(GLUE).gsub(/[^0-9A-Za-z\-_]/, "").squeeze(GLUE)
   end
 
   # 全角数字を Natto に通すと １ => イチ になるので半角数字に
